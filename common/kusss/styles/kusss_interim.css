@@ -1,0 +1,420 @@
+/* ************************************************************************************************
+** JKU CSS fuer KUSSS-Anpassung - Weboffice
+************************************************************************************************
+**  Funktion : Formatierung der Inhalte in Header, Funktionen und Site-Footer
+**  Basis    : YAML 3.0.6
+*/
+
+
+@media all
+{
+
+
+/*************************************************/
+/* Basis-Definitionen (base, basemod, content)   */
+/*************************************************/
+
+/* base.css */
+
+  /* (en) Text Alignment for #topnav content */
+  /* (de) Textausrichtung fuer #topnav Inhalte */
+  #topnav { text-align: right; } 
+
+  /* (en) Absolute positioning only within #header */
+  /* (de) Absolute Positionierung erfolgt nur innerhalb von #header */
+  #header #topnav {
+    position:absolute;
+	top: 5px; /* original 0 */
+	right: 8px; /* original 0 */
+	width: 20em;
+}
+	
+  /* (en) classes for invisible elements in the base layout */
+  /* (de) Klassen fuer unsichtbare Elemente im Basislayout */
+  .skip, .hideme {
+    position: absolute;
+    top: -1000em;
+    left: -1000em;
+    height: 1px;
+    width: 1px;
+  }
+
+  /* (en) make skip links visible when using tab navigation */
+  /* (de) Skip-Links fuer Tab-Navigation sichtbar schalten */
+  .skip:focus, .skip:active {
+    position: static;
+    top: 0;
+    left: 0;
+    height: auto;
+    width: auto;
+  }
+
+/* content.css */
+
+tr#header_kusss td, tr#footer_kusss td, tr#header_kusss td a, tr#header_kusss td p, tr#header_kusss td ul, tr#header_kusss td form, tr#header_kusss td label { /* original auf #page */
+	font-family: 'Lucida Grande', 'Lucida Sans Unicode', 'Trebuchet MS', sans-serif;
+}
+
+tr#header_kusss td, tr#footer_kusss td { /* original auf #page */
+	font-size: 75%;
+}
+
+tr#header_kusss td form { /* original #quicklinks form */
+	margin: 0;
+	padding: 0;
+}
+
+tr#header_kusss td label {
+	color: #474766;
+	font-size: 1em; /* original nix */
+	font-weight: bold;
+	letter-spacing: 0.1em;
+	word-spacing: 0.2em;
+}
+
+tr#header_kusss td input[type="text"], tr#header_kusss td input[type="password"], tr#header_kusss td input.inputfield {
+	border: 1px solid #B0AEC3;
+	padding: 0.1em 0.2em 0.1em 0.2em;
+    width: 7em;
+	color: #666666;
+	font-size: 1em;
+	font-weight: bold;
+}
+
+tr#header_kusss td select {
+	border: 1px solid #747895;
+	padding: 0.2em 0.1em 0.1em 0.1em;
+	background-color: #F7F7F7;
+	color: #474766;
+	font-size: 0.9em;
+	font-weight: bold;
+}
+
+tr#header_kusss td input[type="submit"], tr#header_kusss td input.submit {
+	border: 1px solid #747895;
+	padding: 0.1em 0.3em 0.1em 0.3em;
+	background-color: #F7F7F7;
+	color: #474766;
+	font-size: 1em;
+	font-weight: bold;
+	letter-spacing: 0.1em;
+	word-spacing: 0.2em;
+}
+
+/* Unsichtbare Inhalte (ohne CSS sichtbar, mit Screen Reader tw. nicht!) */
+.display_none {
+	display: none;
+}
+
+
+/*************************************************/
+/* Zusaetzliche Anpassungen                      */
+/*************************************************/
+
+body {
+	margin-left: 30px;
+	margin-right: 30px;
+	margin: 0px;
+  	padding-left: 8px;
+  	padding-right: 8px;
+}
+
+tr#header_kusss * {
+	margin: 0;
+	padding: 0;
+}
+
+tr#header_kusss td {
+	border-top: 5px solid #CCCCCC;
+}
+
+div#nav {
+	margin-bottom: 15px;
+}
+
+td.menu {
+	background-image: none;
+	background-color: #E6E9EE;
+}
+
+tr#footer_kusss td {
+	border-top: 1px solid #E6E9EE;
+}
+
+
+/*****************************************/
+/* Header (Logos, Skip-Links, Sprache)   */
+/*****************************************/
+
+/* Skip-Links */
+/* Klasse .skip (Position ausserhalb sichtbarem Bereich) siehe base.css */
+/* Klasse .hideme (Position ausserhalb, identisch mit .skip) siehe base.css */
+
+/* Schriftgroesse und Sprache */
+
+#topnav .options {
+	float: right;
+	margin: 0;
+	border: 1px solid #CCCCCC;
+	border-top: none;
+	padding: 0 5px; /* original 0 5px */
+	line-height: 28px;
+	display: inline;
+}
+
+* html #topnav .options { /* Anpassung Abstand unten fuer IE6 */
+	padding: 0 5px 10px 5px;
+}
+
+#topnav .options label {
+	float: left;
+	line-height: 3em;
+}
+
+#topnav .options ul#font {
+	margin: 10px 0 0 0;
+	float: left;
+	list-style: none;
+	font-size: 0.9em;
+}
+
+#topnav .options ul#font li {
+	float: left;
+	margin: 0;
+	padding: 0 0 0.1em 0.5em;
+}
+
+#topnav .options ul#font li span, #topnav .options ul#font li a {
+	line-height: 0.5em;
+}
+
+#topnav .options ul#font li .small {
+	font-size: 0.9em;
+}
+
+#topnav .options ul#font li .middle {
+	font-size: 1.1em;
+}
+
+#topnav .options ul#font li .big {
+	font-size: 1.4em;
+}
+
+#topnav .options ul#language {
+	margin: 10px 0.5em 10px 0.5em; /* original 10px 0 0 2.5em */
+	padding: 0 0 0 19px;
+	float: left;
+	list-style: none;
+	background: url(../pics/language.gif) no-repeat;
+	font-size: 0.9em;
+}
+
+#topnav .options ul#language li {
+	float: left;
+	margin: 0;
+	padding: 0 0.4em;
+	line-height: 1.5em; /* original auf li allgemein */
+}
+
+
+/*****************************************/
+/* Functions (Login, Quick Links)        */
+/*****************************************/
+
+/* Gestaltung der Funktionsleiste (Login, Quick Search, Quick Links) */
+ul#functions {
+	overflow: hidden;
+	margin: 3px 0 0 0;
+	border: 1px solid #CCCCCC;
+	border-top: none;
+	padding: 0.5em 2em 0.4em 2em;
+}
+
+* html ul#functions { /* Anpassung Abstand unten fuer IE6 */
+	padding-top: 0.2em;
+	padding-bottom: 1em;
+}
+
+ul#functions li {
+	margin: 0;
+	padding: 0;
+	list-style: none;
+	display: inline;
+}
+
+ul#functions li#login_out {
+	float: left;
+	margin: 0 2.5em 0 0; /* original 0.2em 2.5em 0 0 */
+	vertical-align: middle;
+}
+
+ul#functions li#login_out a {
+	font-weight: bold;
+	margin-left: 0.5em;
+}
+
+ul#functions li.quicknav {
+	float: right;
+}
+
+ul#functions li.quicknav ul {
+	margin: 0;
+	padding: 0; /* original nix */
+}
+
+ul#functions li.quicknav ul li#quicksearch {
+	float: left;
+	margin-right: 2em;
+}
+
+ul#functions li.quicknav ul li#quicklinks {
+	float: left;
+	vertical-align: bottom;
+}
+
+ul#functions li.quicknav ul li#quicksearch form fieldset, ul#functions li.quicknav ul li#quicksearch form p {
+	display: inline;
+	vertical-align: middle;
+}
+
+tr#header_kusss td ul#functions form label { /* original ul#functions li.quicknav ul form label */
+	margin-left: 0.5em;
+	font-weight: normal;
+	letter-spacing: 0;
+	word-spacing: 0;
+}
+
+tr#header_kusss td ul#functions li.quicknav ul li#quicksearch form input.radio { /* original ul#functions li.quicknav ul li#quicksearch form input.radio */
+	vertical-align: middle;
+}
+
+tr#header_kusss td ul#functions form input.inputfield { /* original ul#functions li.quicknav ul li#quicksearch form input.inputfield */
+	margin-left: 0.4em;
+	vertical-align: middle;
+	font-weight: normal;
+}
+
+tr#header_kusss td ul#functions form input.submit { /* original ul#functions li.quicknav ul li form input.submit */
+	margin-left: 0.3em;
+	vertical-align: middle;
+	letter-spacing: 0;
+	word-spacing: 0;
+}
+
+ul#functions li.quicknav ul li#quicksearch form a {
+	margin-left: 0.8em;
+	vertical-align: middle;
+	font-weight: bold;
+}
+
+tr#header_kusss td ul#functions li.quicknav ul li#quicklinks form select { /* original ul#functions li.quicknav ul li#quicklinks form select */
+	width: 14em; /* original 12em */
+	height: 1.7em;
+	vertical-align: middle;
+	font-size: 1em;
+	font-weight: normal;
+}
+
+
+/*****************************************/
+/* Footer (Site-Footer)                  */
+/*****************************************/
+
+/* Content Info: Aktualisierung, Feedback */
+.contentinfo {
+	margin: 0 0 0 20.4%;
+}
+
+/* Site Info: Site-Adresse, Site-Links (Sitemap, Kontakt, Impressum) */
+#siteinfo {
+	overflow: hidden;
+	height: 100%;
+	margin: 0.9em 0 0 0;
+	border-top: 1px solid #ccc;
+	padding: 0.7em 0.3em 0 0.3em;
+}
+
+#siteinfo p {
+	margin-top: 0; /* original nix */
+	margin-bottom: 1em; /* original nix */
+	margin-left: 0; /* original nix */
+	float: left;
+	font-style: italic;
+}
+
+#siteinfo ul {
+	margin-top: 0; /* original nix */
+	margin-bottom: 1.2em; /* original nix */
+	float: right;
+	white-space: nowrap; 
+	text-align: right;
+}
+
+#siteinfo ul li {
+	margin: 0;
+	display: inline;
+	white-space: nowrap; 
+	list-style: none;
+}
+
+
+/*****************************************/
+/* Subsite (subsite.css)                 */
+/*****************************************/
+
+/* Gestaltung des Header mit Logos und Subsite-Name */
+
+/* body#subsite */ div#header {
+	margin-bottom: 0;
+}
+
+/* body#subsite */ div#header span#subsite_name {
+	display: block;
+	border-right: 1px solid #AEAEAE;
+	border-bottom: 1px solid #AEAEAE;
+	border-left: 1px solid #AEAEAE;
+	padding-right: 0.5em;
+	padding-left: 0.5em;
+	background: #E7E7E7 url(../pics/col3_gradient.gif) repeat-x 0 top;
+	font-size: 1.1em;
+	line-height: 28px;
+	font-weight: bold;
+	letter-spacing: 0.03em;
+	color: #4E4E4E;
+}
+
+/* Gestaltung der Breadcrumbs (JKU Root ausserhalb der Subsite-Navigation) */
+
+body#subsite div#breadcrumbs a.jku_root {
+	margin-right: 0.2em;
+	font-weight: bold;
+	letter-spacing: 0.1em;
+}
+
+/* Gestaltung des Footer mit Subsite-Name */
+
+/* body#subsite */ div#siteinfo p em { font-weight: bold; } /* original italic */
+
+
+/*****************************************/
+/* Intranet (intra.css)                 */
+/*****************************************/
+
+/* Platzeinsparung - oberhalb Logos */
+body.intra div#header span {
+	font-size: 30px;
+	vertical-align: bottom;
+}
+
+/* Platzeinsparung - Abstand zwischen functions und 3-Spaltenbereich */
+body.intra div#nav {
+	margin-bottom: 8px;
+}
+
+/* Kennzeichnung unterhalb Hauptnavigation und Funktionen (logged in)  */
+body.intra div#nav ul#functions {
+	border-bottom: 2px solid #D03B6F; /* original #FCC900 */
+}
+
+
+}

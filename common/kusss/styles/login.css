@@ -1,0 +1,32 @@
+/* NOT USED ANYMORE */
+
+div.login
+{
+	margin: 8px 3px;
+	padding: 3px;
+	border: 1px solid #777;
+	background: #d3d6db;
+}
+
+div.login input.inputfields
+{
+	padding: 1px;
+	width: 7em;
+}
+
+div.login input#superid
+{
+	background: yellow;
+	color: black;
+}
+
+div.login input#userid
+{
+	background: #cdcdcd;
+}
+	
+div.login label
+{
+	letter-spacing: 0;
+	word-spacing: 0;
+}

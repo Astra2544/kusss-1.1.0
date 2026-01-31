@@ -1,0 +1,503 @@
+/*------------------------------------------------------------*/
+/* 2002 � Institut f�r Datenverarbeitung, JK Universit�t Linz */
+/* Letzte �nderung 11.8.2002; Michael Wimmer (flaimo@gmx.net) */
+/*------------------------------------------------------------*/
+/* Erweiterte Formatierung; nur f�r Browser Version 5+        */
+/*------------------------------------------------------------*/
+
+@media screen, projection {
+ 
+  big {
+    padding-top: 4px;
+  }
+
+  img.topnav {
+    vertical-align:text-bottom;
+  }
+
+  img.icon {
+    vertical-align:middle;
+  }
+
+  .inputfields, .inputfieldslogin, .inputfieldsquicksearch {
+    color: #666;
+    background: #fff url(../pics/input_back.gif) no-repeat;;
+    border: 1px solid #B0AEC3;
+  }
+  
+  .inputfieldsdisabled {
+  	color: #666;
+  	background: #ccc;
+  	border: 1px solid #B0AEC3;
+  }
+  
+  .inputfieldsred {
+	font-weight: bold;
+    font-size: 11px;
+	color: white;	
+    background: red;
+    border: 1px solid #B0AEC3;	
+  }
+  
+  .inputfieldsgreen {
+    font-weight: bold;
+	font-size: 11px;
+	color: white;
+    background: green;
+    border: 1px solid #B0AEC3;  
+  }
+
+  .inputfieldslogin {
+    margin-bottom: 6px;
+  }
+  
+  .dropdownentrygroup {
+	background: #BBBEDE;
+  }
+
+  .dropdown, .dropdownentry {
+    background: #D6D7E9;
+  }
+
+  .dropdownentry, .dropdownentryselected, .dropdownentrygroup {
+    color: #333298;
+  }
+
+  .dropdownentryselected {
+    background: #ffffff;
+  }
+
+  .buttonstyle, .buttonstylelogin {
+    background: #D6D7E9 url(../pics/button_back.gif) no-repeat;
+    border: 1px solid #747895;
+    color: #333298;
+  }
+  
+  .dangerousbuttonstyle {
+  	background: #D6D7E9 url(../pics/button_back.gif) no-repeat;
+    border: 1px solid #747895;
+    color: #DA0000;
+  }
+
+  .buttonregstyle, .buttonregstyleactive {
+    background: #D6D7E9;
+    border: 1px solid #747895;
+    color: #333298;
+    font-weight: bold;
+    width: 18px;
+    margin: 3px;
+    font-size: 11px;
+  }
+  
+ .filebuttonstyle {   
+    border: 1px solid #747895;
+    color: #333298;
+    font-weight: bold;   
+    margin: 3px;
+    font-size: 11px;
+  }
+  
+  .buttonregstyleactive {
+    background: #D6D7E9 url(../pics/blink_back.gif) repeat;
+  }
+
+  .buttonstyle[disabled], .buttonstylelogin[disabled] {
+    background: #EBEBF4;
+    border: 1px solid #BABCCA;
+    color: #9999CC;
+  }
+
+
+  
+  .helptext {
+    border: 0px solid #747895;
+    
+    color: #333298;
+    margin-right: 40px;
+    font-size: 12px;    
+    
+    padding: 0px;
+    /*background: #FAFAFA url(../pics/helptext_back.gif) repeat-y;*/
+  }
+
+/*
+  span.priority, a.priority {
+    font-family: "Courier New", Courier, mono;
+    padding: 1px 3px;
+    margin: 3px;
+    text-decoration: none;
+    border: 1px solid #747895;
+    background: #D6D7E9;
+  }
+
+  a.priorityblink {
+    font-family: "Courier New", Courier, mono;
+    padding: 1px 3px;
+    margin: 3px;
+    text-decoration: none;
+    border: 1px solid #747895;
+    background: #D6D7E9 url(../pics/blink_back.gif) repeat;
+  }
+  */
+
+  table.headnavigation {
+    margin-bottom: 10px;
+  }
+} /* end @media screen */
+
+/* Druckversion */
+@media print {
+
+  a.normallinkblack{
+  	text-decoration: none;
+  }
+
+  body {
+    font: 9pt sans-serif;
+    line-height: 12pt;
+    background: #fff;
+    margin: 0px;
+    padding: 0px;
+    color: #000;
+  }
+
+  /* Blendet Navigationselemente aus */
+  .menu, .contextmenu, .menulz, .contextmenulz, #headerleiste, #headerleistelz, .headnavpics, .headtext, #logo, .icon, .vcal, .noprint {
+    display: none;
+  }
+
+  h2 {
+    font-size: 20pt;
+    font-weight: 900;
+    margin-bottom: 3px;
+    margin-top: 8px;
+    background: #fff;
+  }
+
+  h3 {
+    font-size: 14pt;
+    font-weight: 900;
+    margin-bottom: 3px;
+    margin-top: 8px;
+    background: #fff;
+  }
+
+  h4 {
+    font-size: 12pt;
+    font-weight: bold;
+    background: #fff;
+    border-bottom: 1px solid #000;
+  }
+
+  h5 {
+    font-weight: bold;
+    color:#D03B6F;
+    margin: 8px 3px 0px 5px;
+    background: #fff;
+  }
+
+  h6 {
+    margin: 0px;
+    padding: 0px;
+    background: #fff;
+    color: #000;
+  }
+
+  img {
+    border: 0px;
+  }
+  
+  label {
+    color: #000;
+  }
+
+  th {    
+    color: #000;
+    font-weight: bold;
+	background-color: #ff6600 	
+  }
+
+  p, td {
+    color: #000;
+  }
+
+  dl, ul, ol {
+    background: #fff;
+    line-height: 14pt;
+  }
+
+  hr {
+    color: #D3D6DB;
+    background: #fff;
+  }
+
+  big {
+    font-size: 10pt;
+    background: #fff;
+    font-weight: bold;
+  }
+
+  caption {
+    font-weight: bold;
+    background: #fff;
+  }
+
+  .pbb {
+    page-break-before:always;
+  }
+
+  .pba {
+    page-break-after:always;
+  }
+
+  .headnavigation {
+    background: #fff;
+    padding: 5px;
+    border: 0px;
+    font-weight: bold;
+    color: #000;
+    border-bottom: 1px solid #000;
+  }
+  
+  .footer {
+    background: #fff;
+    padding: 3px;
+    border: 0px;
+    font-weight: bold;
+    color: #000;
+    text-align: right;
+  }
+  
+  .footerback {
+    background: #fff url(../pics/footer_back.gif) repeat-x;
+    padding: 0px 0px 0px 3px;
+    color: #000;
+    text-align: left;
+    vertical-align: bottom;
+  }
+  
+  /* Navigationsbereich oben bei ILAS Anmeldung */
+  .headnavigationlevel2, .headnavigationlevel3, .headnavigationlevel4, .headnavigationlevel5, .headnavigationlevel6 {
+    background: #fff;
+    font-weight: bold;
+    color: #000;
+  }
+  
+  .headnavigationlevel2 {
+    font-size: 14px;
+  }
+  
+  .headnavigationlevel3 {
+    font-size: 13px;
+  }
+
+  .headnavigationlevel4 {
+    font-size: 12px;
+  }
+
+  .headnavigationlevel5 {
+    font-size: 11px;
+  }
+  
+  .headnavigationlevel6 {
+    font-size: 10px;
+  }
+  
+  .lightcell {
+    color: #000;
+    background: #fff;
+  }
+  
+  .darkcell {
+    background: #E6E9ED;
+    border: 1px;
+    
+    color: #000;
+  }
+
+  .navback {
+    color: #333298;
+    background: #fff;
+  }
+
+  .contentmenuheader {
+    font-weight: bold;
+    color: #000;
+    text-decoration: none;
+    background: #fff;
+  }
+  
+  a, .normallinkblue, .normallinkwhite, .normallinkcyan, a.priority {
+    color: #000;
+    background: #fff;
+  }
+ 
+  a.priority, .priorityblink {
+    font-family: "Courier New", Courier, mono;
+    padding: 1px 3px;
+    margin: 3px;
+    text-decoration: none;
+    border: 1px solid #000;
+    background: #fff;
+    font-weight: bold;
+  }
+  
+  .inputfields, .buttonstyle, .buttonstylelogin, .inputfieldslogin {
+    font-size: 8pt;
+  }
+  
+  .inputfieldslogin {
+    width: 100px;
+  }
+
+  .red {
+    font-weight: bold;
+    color: #FF0000;
+    background: #fff;
+  }
+
+  .voraussetzung {
+    color: #000000;
+    font-size: 10pt;
+    font-weight : bolder;
+    background: #fff;
+  }
+
+  div.contentcell {
+    padding: 0px;
+    margin: 0px;
+    background: #fff;
+    color: #000;
+  }
+  
+  td.contentcell {
+    background: #fff;
+    color: #000;
+    border-right: none;
+  }
+
+  .levela {
+    font-size: 13pt;
+    font-weight: bold;
+    color: #000000;
+    background: #fff;
+  }
+  
+  .levelb {
+    font-size: 12pt;
+    background: #fff;
+  }
+
+  .levelc {
+    font-size: 11pt;
+    color: #000;
+    background: #fff;
+  }
+
+  .leveld {
+    font-size: 10pt;
+    text-decoration: none;
+    background: #fff;
+  
+  }
+
+  table.contenttable {
+    margin: 0px 0px;
+    background: #fff;
+  }
+
+  table.hborder td{
+	border-bottom: thin solid silver;
+  }
+
+  table.hborder th {
+	border-top: thin solid silver;
+	border-bottom: thin solid silver;
+	background-color: #ffffff;
+	background-image: none;
+	color: #333333;
+  }
+
+  table.vborder td {
+	border-left: thin solid silver;
+	border-right: thin solid silver;
+  }
+
+  table.vborder th {
+	border-left: thin solid silver;
+	border-right: thin solid silver;
+	background-color: #ffffff;
+	background-image: none;
+	color: #333333;	
+  }
+
+  table.cborder {
+  	border-collapse: collapse;
+  }
+
+  table.cborder tr {
+  	border-collapse: collapse;
+  }
+
+  table.hborderdark td{
+	border-bottom: thin solid silver;
+  }
+
+  table.hborderdark th {
+	border-top: thin solid silver;
+	border-bottom: thin solid silver;
+	background-color: #ffffff;
+	background-image: none;
+	color: #333333;
+  }
+
+  table.vborderdark td {
+	border-left: thin solid gray;
+	border-right: thin solid gray;
+  }
+
+  table.vborderdark th {
+	border-left: thin solid gray;
+	border-right: thin solid gray;
+	background-color: #ffffff;
+	background-image: none;
+	color: #333333;	
+  }
+
+  table.cborderdark {
+  	border-collapse: collapse;
+  }
+
+  table.cborderdark tr {
+  	border-collapse: collapse;
+  }
+
+  table.sfont th {
+  	font-family: sans-serif;
+    font-size: 12px;
+    font-weight: bold;
+  }
+	
+  table.sfont td {
+  	font-family: sans-serif;
+    font-size: 12px;
+  }
+
+  table.nosideborder td {
+  	border-left: none;
+	border-right: none;
+  }
+
+	/* timetable types */
+	td.timetable_entry_reg {	
+		border: #ABABAB 1px dotted;	
+	}
+	td.timetable_entry_assign {	
+		border: #363636 1px solid;
+	}
+	
+	td.timetable_entry_wishlist {
+		border: 1px dotted silver;
+	}
+	
+}

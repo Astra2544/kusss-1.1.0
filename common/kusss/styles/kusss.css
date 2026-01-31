@@ -1,0 +1,1283 @@
+/*------------------------------------------------------------*/
+/* 2002  Koordinationsstelle E-Learning, JK Universitaet Linz */
+/* Letzte Aenderung 26.07.2002; Michael Wimmer (flaimo@gmx.net) */
+/* Zwischenzeitliche Aenderungen ??.??.????; ??? */
+/* Letzte Aenderung und Abgleich 28.09.2003; Andrea Ecker (andrea.ecker@jku.at) */
+/* Aenderungen von Philipp Grasboeck fuer KUSSS 2.5 */
+/*------------------------------------------------------------*/
+
+body{
+  font: 11px Verdana, Arial, Helvetica, sans-serif;
+  background: #ffffff;
+  /*background: #fffef4;*/
+  margin: 0px;
+  padding: 0px;
+  color: #000000;
+  /* Scrollleisten-Farben - wird z.z. in xhtml/css2 nicht interpretiert. ev in css3 drinnen. 
+
+  scrollbar-face-color: #DFDFDF;
+  scrollbar-shadow-color: #FFFFFF;
+  scrollbar-highlight-color: #FFFFFF;
+  scrollbar-3dlight-color: #CCCCCC;
+  scrollbar-darkshadow-color: #CCCCCC;
+  scrollbar-track-color: #CCCCCC;
+  scrollbar-arrow-color: #999999;    
+
+  -moz-scrollbar-track-color: #CCCCCC;  (= scrollbar-track-color im IE)
+  -moz-scrollbar-face-color: #DFDFDF; (= scrollbar-face-color im IE)
+  -moz-scrollbar-arrow-color: #999999; (= scrollbar-arrow-color im IE)
+  */
+}
+
+/* Notwendig fuer richtige Schriftdarstellung in NS 4 */
+.levela, .levelb, .levelc, .leveld, caption, h3, h4, h5, h6, hr, label, p, a, small, dl, ul, .headnavigationlevel2, .headnavigationlevel3, .headnavigationlevel4, .red, .navback, .leftmenu, .leftsubmenu, a.leftsubmenuactive, .contentmenuheader, .normallinkblue, a.priority, .normallinkwhite, .normallinkcyan, .normallinkblack, .statuslink, div.contentcell, table.contenttable, .chatpublicmessage, .chatprivatemessage, .chatquitmessage, .chatjoinmessage, .chatsystemmessage {
+  font-family: Verdana, Arial, Helvetica, sans-serif;
+  background: transparent;
+}
+
+h1 {
+  font-size: 1.9em;
+  font-weight: 600;
+  margin-left: 5px;
+  margin-bottom: 0px;
+  margin-top: 3px;
+  color: #ffffff;
+  letter-spacing: 1px;
+}
+
+h3 {
+  font-size: 17px;
+  font-weight: 400;
+  color: #000033;
+  margin-left: 5px;
+
+  margin-top: 3px;
+}
+
+h4 {
+  margin-left: 5px;
+  font-size: 14px;
+  color: #000038;
+  font-weight: 300;
+}
+
+h5 {
+  font-size: 13px;
+  font-weight: bold;
+  
+  color:#D03B6F;
+  margin: 8px 3px 5px 5px;
+}
+
+h6 {
+  margin: 0px;
+  padding: 0px;
+}
+
+big {
+  font: 11px Verdana, Arial, Helvetica, sans-serif;
+  background: transparent;
+}
+
+small{
+  font-size: 10px;
+}
+
+th {
+  font: 11px Verdana, Arial, Helvetica, sans-serif;
+  background: #B24372 url(../pics/cyan_back.gif) repeat;
+  color: #F7F7F7;
+  font-weight: bold;	
+}
+
+div.systemconsole th
+{
+  font: 11px Verdana, Arial, Helvetica, sans-serif;
+  background: #E1E1E1  repeat;
+  color: black;
+  font-weight: bold;
+}
+
+th.light {
+  background: #D03B6F url(../pics/cyan_back_light.gif) repeat;
+}
+
+/*C84D78*/
+p, td {
+  font: 11px Verdana, Arial, Helvetica, sans-serif;
+  color: #000000;
+}
+
+p, big, .text {
+  margin-left: 5px;
+  margin-right: 2%;
+}
+
+hr {
+  color: #D3D6DB;
+}
+
+img {
+  border: 0px;
+}
+
+/* fuer Formularfelder */
+label {
+  color: #333298;
+  word-spacing: 0.2em;
+  font-weight: bold;
+  font-size: 10px;
+}
+
+label.inheader {
+  color: #ffffff;
+  word-spacing: 0em;
+  letter-spacing: 0em;
+}
+
+label.normaltext {
+  color: #000000;
+  word-spacing: 0em;
+  letter-spacing: 0em;
+  font-weight: normal;
+}
+
+/* Tabellenbeschriftung */
+caption {
+  font-size: 12px;
+  font-weight: bold;
+}
+
+/*
+dl, ul, ol {
+  margin: 0px 0px 0px 26px;
+  line-height: 12pt;
+}
+
+dd + dt {
+  margin-top: 10px;
+}
+*/
+
+acronym {
+  cursor: help;
+}
+
+form {
+  margin: 8px 0px 0px 0px;
+  padding: 0px;
+}
+
+form.nomargin {
+  margin: 0px;
+  padding: 0px;
+}
+
+form.formmenu {
+  margin: 8px 0px 0px 5px;
+  padding: 0px;
+}
+
+form.setpri {
+  margin: 0px 5px;
+  padding: 0px;
+}
+
+table.lot {
+  border-collapse:collapse;
+  border-spacing:0px;
+}
+
+input:focus {
+  background: #E1E1E1;
+}
+
+td.headnavigation {
+  font-family: Verdana, Arial, Helvetica, sans-serif;
+  background: #D3D6DB;
+  padding: 4px;
+  border: 0px;
+  font-weight: bold;
+  color: #000000;
+  vertical-align: middle;
+}
+
+/* Header und Footer Formatierung */
+#headerleiste {
+  font: 10px Verdana, Arial, Helvetica, sans-serif;
+  background: #D3D6DB url(../pics/bg_kuss_stud.gif) repeat;
+  vertical-align: middle;
+  color: #000000;
+}
+
+
+#headerleistelz {
+  font: 10px Verdana, Arial, Helvetica, sans-serif;
+  background: #C2D5E1 url(../pics/bg_kuss_lz.gif) repeat;
+  vertical-align: middle;
+  color: #000000;
+}
+
+#headerleistestpa {
+  font: 10px Verdana, Arial, Helvetica, sans-serif;
+  background: #C2D5E1 url(../pics/bg_kuss_stpa.gif) repeat;
+  vertical-align: middle;
+  color: #000000;
+}
+
+.footerleft {
+  background: #ffffff url(../pics/fusszeilebg.gif) repeat-x;
+}
+
+.footerright {
+  background: #ffffff url(../pics/footer_right.gif) no-repeat;
+}
+
+.menu {
+  background: #D3D6DB url(../pics/bg_kuss_stud2.gif) repeat;
+  color: #000000;
+}
+
+.contextmenu {
+  background: #EFEEF3 url(../pics/ctx_menu_bg.gif) repeat;
+}
+
+.menulz, .contextmenulz {
+  background: #C2D5E1 url(../pics/bg_kuss_lz2.gif) repeat;
+  color: #000000;
+}
+
+.menustpaz, .contextmenustpaz {
+  background: #C2D5E1 url(../pics/bg_kuss_stpa2.gif) repeat;
+  color: #000000;
+}
+
+
+.inputfields, .buttonstyle, .dangerousbuttonstyle, .buttonstylelogin, .inputfieldslogin, .inputfieldsquicksearch, .dropdown, .dropdownentry, .dropdownentrygroup {
+  font: bold 10px Verdana, Arial, Helvetica, sans-serif;
+}
+
+.dropdown, .dropdownentry {
+  font-weight: normal;
+}
+
+.dropdownentrygroup {
+  font-weight: bold;
+}	
+
+.inputfieldslogin {
+  width: 7em;
+}
+
+.inputfieldsquicksearch {
+  width: 60px;
+} 
+
+/* Formatierung von Menue und Kontextmenue */
+.leftmenu {
+  font-weight: bold;
+  text-decoration: none;
+  color: #333298;
+  line-height:11px;
+}
+
+.leftmenu-nolink {
+  font-weight: bold;
+  text-decoration: none;
+  color: #0C1C41;
+  line-height:11px;
+}
+
+.leftsubmenu {
+  font-size: 11px;
+  font-weight: normal;
+  color: #333298;
+  text-decoration: none;
+  line-height:11px;
+}
+
+a.leftsubmenuactive {
+  font-size: 11px;
+  font-weight: normal;
+  color:#D03B6F;
+  text-decoration: none;
+  line-height:11px;
+}
+
+a:hover {
+ color:#D43B6F;
+}
+
+/* Content-Zelle in der Haupttabelle */
+div.contentcell {
+  padding: 8px;
+  color: #000000;
+}
+
+td.contentcell {
+	border-right: 1px solid #E6E9EE;
+}
+
+table.lot td.contentcell {
+	border-right: none;
+}
+
+/* Navigationsbereich oben bei LVA-Anmeldung */
+.headnavigationlevel2, .headnavigationlevel3, .headnavigationlevel4, .headnavigationlevel5, .headnavigationlevel6 {
+  font-weight: bold;
+  color: #333298;
+}
+
+.headnavigationlevel2 {
+  font-size: 10px;
+}
+
+.headnavigationlevel3 {
+  font-size: 10px;
+}
+
+.headnavigationlevel4 {
+  font-size: 10px;
+}
+
+.headnavigationlevel5 {
+  font-size: 10px;
+}
+
+.headnavigationlevel6 {
+  font-size: 10px;
+}
+
+.navback {
+  color: #333298;
+}
+
+.contentmenuheader {
+  font-size: 11px;
+  font-weight: bold;
+  color: #000000;
+  text-decoration: none;
+}
+
+/* Link-Farben */
+a, .normallinkblue, a.priority {
+  color: #333298;
+}
+
+a:focus {
+  color: #000000;
+}
+
+.normallinkwhite {
+  color: #ffffff;
+}
+
+a.normallinkwhite:hover {
+  color: #ffffff;
+}
+
+.normallinkblack {
+  color: #000000;
+}
+
+.normallinkcyan {
+  color: #D03B6F;
+}
+
+.normallinkblue {
+	text-decoration : none;
+}
+
+a.normallinkblue:visited, a.priority:visited {
+  color: #333298;
+}
+
+a.normallinkwhite:visited {
+  color: #ffffff;
+}
+
+a.normallinkcyan:visited {
+  color: #D03B6F;
+}
+
+a.normallinkblack:visited {
+	color: #000000;
+}
+
+a.priority {
+  font-weight: bold;
+}
+
+.darkline {
+    border: none;
+    height: 1px;
+    color: #827595;
+    background-color: #827595;
+}
+
+/* Zellenformatierung bei Auflistungstabellen */
+.prioritydark {
+  background: #D2D8DF;
+}
+
+.prioritylight {
+  background: #E1E1E1;
+}
+
+.priorityhighlighted {
+  background: #B2B5B9 url(../pics/highlight_line_sz.gif) repeat;
+}
+
+.priorityhighlightedlz {
+  background: #C2D5E1;
+}
+
+.lightcell {
+  color: #000000;
+  background: #F5F7F7;
+}
+
+.darkcell {
+  color: #000000;	
+  background: #E1E1E1;
+}
+
+/** alternating row styles exams **/
+
+.darkcell_exams {
+	background: #b5cef1;
+}
+.lightcell_exams {
+	background: #bfdaff;
+}
+
+.highlightcell
+{
+	background: #c2d5ee;
+}
+
+tr.highlightcell td.prioritylight
+{
+	background: #c2d5ee;
+}
+
+.highlightdarkcell
+{
+	background: #c2d5ee;
+}
+
+tr.highlightdarkcell td.prioritydark
+{
+	background: #c2d5ee;
+}
+
+tr.highlightcell td.prioritylight
+{
+	background: #c2d5ee;
+}
+
+.prioritydark_exams, .prioritydark_exams td {
+	color:#333;
+	background: #BFD9FF;
+}
+.prioritylight_exams, .prioritylight_exams td {
+	color:#333;
+	background: #BFD9FF;
+}
+
+/** --- **/
+
+.inactiveheader {
+  color: #000000;
+  font-weight: bold;
+  background:   #D2D8DF;
+}
+
+.discreetheader td {
+  color: #000000;
+  font-weight: bold;
+  background:   #D2D8DF;  
+}
+
+
+.red {
+  font-weight: bold;
+  color: #FF0000;
+}
+
+.green {
+  font-weight: bold;
+  color: #157A10;
+}
+
+.lesspriogroup {
+  font: 12px bold "Courier New", Courier, mono;
+  color: #FF0000;
+  cursor: help;
+}
+
+.normalpriogroup {
+  font: 12px bold "Courier New", Courier, mono;
+  color: #000000;
+  cursor: help;
+}
+
+.betterpriogroup {
+  color: #157A10;
+  font: 12px bold "Courier New", Courier, mono;
+  cursor: help;
+}
+
+.lvalistsaved, .lvalistnotsaved {
+  font: 12px bolder Verdana, Arial, Helvetica, sans-serif;
+  text-align: center;
+}
+
+.lvalistnotsaved {
+  color: #FF0000;
+}
+
+.voraussetzung, .testnotpossible {
+  font: 12px bold "Courier New", Courier, mono;
+  font-weight : bolder;
+  background: transparent;
+  cursor: help;
+}
+
+.loggedin {
+  margin: 8px 0px 0px 7px;
+  font-weight: normal;
+  color: #333298;
+}
+
+/* Fuer die "V" Legende auf den LVA Seiten */
+.voraussetzung {
+  color: #000000;
+}
+
+.testnotpossible {
+  color: blue;
+}
+
+.regperiod {
+  line-height: 10px;
+  padding: 4px 0px;
+}
+
+/* Formatierung von Listen */
+.levela {
+  font-size: 13px;
+  font-weight: bold;
+  color: #D03B6F;
+}
+
+.levelb {
+  font-size: 11px;
+  font-weight: bold;
+}
+
+.levelc {
+  font-size: 10px;
+  color: #D03B6F;
+}
+
+.leveld {
+  font: normal 9px Verdana, Arial, Helvetica, sans-serif;
+  text-decoration: none;
+}
+
+/* Formatierung fuer den Chatroom */
+.chatpublicmessage, .chatprivatemessage, .chatquitmessage, .chatjoinmessage, .chatsystemmessage {
+  font-size: 11px;
+}
+
+.chatsystemmessage {
+  	color: #FF0000;
+	font-weight : bold;
+}
+
+.chatjoinmessage, .chatquitmessage {
+  color: #999999;  
+}
+
+.chatprivatemessage {
+  color: #990000;
+}
+
+.chatpublicmessage {
+  color: #000000;
+}
+
+table.contenttable {
+  margin: 0px 10px;
+}
+
+
+/* Aktiver Tabheader */
+td.categoryactive {
+	background: 	#D03B6F;	
+	font-weight: bold;
+	text-align: center;
+	border-bottom: 0px;
+}
+
+/* Inkativer Tabheader */
+td.categories {
+	background: #D2D8DF;
+	text-align: center;
+	
+	border-bottom: #D03B6F thin solid;
+}
+
+td.categoryactive a {
+	color: black;
+}
+
+td.categoryactive a:hover {
+	color: white;
+}
+
+td.categoryactive a:visited {
+	color: white;
+}
+
+td.categoryactive a:link {
+	color: white;
+}
+
+
+/* Link im Tabheader */
+a.tabcategory {
+	color: black;
+	text-decoration: none;
+}
+
+/* Link im aktiven Tabheader */
+a.tabcategoryactive {
+	color: white;
+	text-decoration: none;
+}
+
+/* Content-Bereich des Tabs */
+td.tabcontent {	
+	width: 100%;
+	border-left: thin solid #D03B6F;
+	border-right: thin solid #D03B6F;
+	border-top: hidden;
+	border-bottom: thin solid #D03B6F;		
+}
+
+/* Die Bereiche die zwischen den Tab-Headern */
+td.tabspacer {
+	width: 100%;	
+	border-bottom: thin solid #D03B6F;	
+}
+
+.courseinfo {
+  margin-top: 0px;
+  margin-bottom: 0px;
+  margin-left: 5px;
+  color: #000022;
+  font: 12px Verdana, Arial, Helvetica, sans-serif;
+  background: transparent;
+}
+
+.message {
+	color: #FF6347;
+	font-weight : bold;
+}
+
+.error,.error_icon {
+	color:  #DA0000;
+	font-weight : bold;
+}
+
+.courseclass_extinfos {	 
+	 border-bottom:	0px solid #DDD;
+	 border-right:  1px dotted #BF6060;	 
+	 color:			#BF6060;
+	 padding:		2px 2px 2px 0;
+	 font-size:		10px;
+	 font-weight:	bold;
+	 text-transform: uppercase;
+}
+
+.warning, .warning_icon {	
+	
+	font-weight: bold;
+	color: #FF6633;
+}
+
+.warning_icon {
+	padding-left:18px ;
+	background: url(../pics/icon_warn.gif) no-repeat left top;
+	text-align: left;
+}
+
+.error_icon {
+	padding-left:18px ;
+	background: url(../pics/icon_error.gif) no-repeat left top;
+	text-align: left;
+}
+
+.info_icon {
+	color: #00487D;
+	padding-left:18px ;
+	background: url(../pics/icon_info.gif) no-repeat left top;
+	text-align: left;
+}
+
+.border {
+	border : 1px ridge #E0E0E0;
+	margin-bottom : 7px;
+}
+
+.borderbold {
+	border : 3px solid #7D7D7D;
+	margin-bottom : 7px;
+}
+
+/* Support border */ 
+.borderpink {
+	border : 1px solid;
+	margin-bottom : 7px;
+	border: thin solid #D03B6F;
+}
+
+/* Formatierung von Chat-Beitraegen und Eingabeleiste (z.B. Chat auf der Video-Seite) */
+.chatmessagedate {
+	width: 7em;
+	white-space: nowrap;
+	font-style: italic;
+}
+
+.chatmessageauthor {
+	width: 5em;
+}
+
+.chatscreenmessage {
+	font-size: 1.8em;
+	color: #000000;
+}
+
+.chatquestion {
+	font-style: italic;
+	color: #CC0000;
+}
+
+.chatanswer {
+	font-style: italic;
+	color: #157A10;
+}
+
+.chatstatement {
+	font-style: italic;
+	color: #444480;
+}
+
+.chatinput {
+	border: 1px ridge #E0E0E0;
+	margin-bottom: 7px;
+}
+
+/* Formatierung von ausklappbaren Subinfo-Tabellen - table oder td (z.B. Termine) */
+.subinfo {
+	  border-left: thin solid #333298;
+	  border-right: thin solid #333298;
+	  border-bottom: thin solid #333298;
+	  padding: 4px;
+}
+
+
+tr.subinfo td {
+	  border-bottom: thin dotted #333298;
+}
+
+td.subinfoleft {
+	  border-left: thin dotted #333298;
+}
+
+td.subinforight {
+	  border-right: thin dotted #333298;
+}
+
+/* Formatierung von einblendbaren Neben-Tabellen neben der Haupttabelle (z.B. um von Neben- in die Haupttabelle zuzuordnen) */
+td.sidetable {
+	border: thin dotted #333298;
+	background-image: url(../pics/sidetable.gif);
+	background-repeat: no-repeat;
+}
+
+div.extable {
+	border: thin dotted #333298;
+	background-image: url(../pics/sidetable.gif);
+	background-repeat: no-repeat;
+}
+
+div.sidetable {
+	border: none;
+	font-weight: bold;
+	text-align: left;
+	padding: 0.5em 0.2em 0.6em 0.2em;
+	text-indent: 1.2em;
+}
+
+td.importtable {
+	border: thin dotted #333298;
+	background-repeat: no-repeat;
+}
+
+div.importtable {
+	overflow: auto;
+	height: 140px;
+}
+
+/* Formatierung von Tabellen in der Druckansicht / fuer den Druck */
+table.print td {
+	border-bottom: thin dotted #333333;
+	border-collapse: collapse;
+}
+
+table.print th {
+	border-top: thin dotted #333333;
+	border-bottom: thin dotted #333333;
+	background-color: #ffffff;
+	background-image: none;
+	color: #333333;
+}
+
+/* Formatierung von Statusangaben in Textform (z.B. Status des Video-Streams bei den Terminen) */
+.status {
+	font: 11px Verdana, Arial, Helvetica, sans-serif;
+	color: #000000;
+	font-size: 0.8em;
+	text-transform: uppercase;
+	border: thin solid #FFFF66;
+}
+
+a.statuslink {
+	font: 11px Verdana, Arial, Helvetica, sans-serif;
+	color: #333298;
+	font-size: 0.8em;
+	font-weight: bold;
+	text-decoration: none;
+	text-transform: uppercase;
+	border: thin solid #333298;
+	background: #FFFF66;
+}
+
+a.statuslink:visited {
+  color: #333298;
+}
+
+/* Formatierung von Buttonleisten ober-/unterhalb von Tabellen (z.B. bei den Termin-Seiten) */
+.buttonbar {
+	color: #000000;
+}
+
+/* Formatierung von Auswahlkategorien ("Tabs") fuer die Bearbeitung (z.B. bei der Bearbeitung von Einzelterminen) */
+table.tabs {
+	table-layout: fixed;
+}
+
+col.category {
+	width: 8em;
+}
+
+col.spacer {
+	width: 10px;
+}
+
+
+
+
+/* Formatierung von Infos zu Download-Dateien (File-Typ, Groesse; z.B. bei den News und Terminen) */
+.fileinfo {
+	font-size: 0.8em;
+	font-style: italic;
+}
+
+/* Formatierung von unsichtbaren Elementen (z.B. von td mit zeilenweise sich wiederholendem Inhalt) */
+.hidden {
+	visibility: hidden;
+}
+
+/* Formatierung von Tabellenabschnitten mit gleicher Hintergrundfarbe (horizontale Linien) */
+td.grid {
+	border-top: thin solid #D2D8DF;
+}
+
+/* Formatierung des Blaettern-Moduls (z.B. bei Tabellen mit vielen Eintraegen) */
+.paging {
+	color: #000000;
+	border : 1px ridge #E0E0E0;
+}
+
+/* ... damit (mehrere) Buttons in den Modulen Buttonbar und Paging (Blaettern) auch innerhalb des form-Tags nebeneinander dargestellt werden */
+form.buttonbarinline {
+	display: inline;
+}
+form.paginginline {
+	display: inline;
+}
+
+/* Formatierung von einfachen Listen innerhalb von Tabellen (z.B. Sammelzeugnisse in der LVA-BL-SZ-Uebersicht) */
+ol.tablelist, ul.tablelist {
+	margin-left: -5%;
+	list-style-position: outside;
+	list-style-image: url(../pics/page.gif);
+}
+
+/* Formatierung des Pfades rechts oben im Content-Bereich (Position im aktuellen Hierarchiezweig) */
+.path {
+	font: 11px Verdana, Arial, Helvetica, sans-serif;
+	font-style: oblique;
+}
+
+p.path {
+	text-align: right;
+	margin-top: 0%;
+	margin-bottom: 0%;
+	margin-right: 0%;
+}
+
+span.here {
+	text-decoration: none;
+	background: #ffffcc;
+}
+
+/* Formatierungen fuer Zuteilungsergebnisse */
+
+.assignment-active {
+  font-weight: bold;
+  color: #157A10;
+}
+  
+.assignment-inactive {
+  font-weight: bold;
+  color: #AAAAAA;
+}
+
+.assignment-waitinglist {
+  font-weight: bold;
+  color: #FF631A;
+}
+
+.dotted-bottom {          
+    margin-left:5%;
+    margin-right:10%;
+    border-top: 0px;
+    border-left: 0px;
+    border-right: 0px;
+    border-bottom: 1px dotted;    
+}
+
+table.errorbox {
+	color		:  #EA0000;
+	font-weight :  bold;
+	border      :  thin solid;
+	margin-top  :  20px; 
+	text-align  :  center;
+}
+
+#invisible, .invisible {
+	color: #333333;
+	background-color: #999999;
+}
+
+
+#deleted, .deleted {
+	color: #333333;
+	background-color: #FF6666;
+}
+
+ul.attachments  {	
+	list-style: none;
+	padding:0px;
+	margin:2px 0 2px 5px;
+}
+
+.current {
+	border:1px solid black;
+	padding:2px;
+}
+
+
+div.chart {
+	height:15px;
+	background-color: #99cc66;
+	border: 1px solid #333;
+	padding:1px;
+	margin:0px;	
+}
+
+div.section {
+    padding:5px;
+    border-width: 1px 1px 1px 1px;
+    border-style: solid;
+    border-color:#999;
+    margin: 10px 0 6px 0;
+}
+
+div.sectionheader {
+	font-weight: bold;
+	margin-bottom: 3px;	
+ 	font-size: 14px;
+  	color: #000038;  	
+  	padding:2px;
+}
+
+option.selectedterm {
+	font-weight: bold;
+}
+
+select.searchparamactive {
+	color:  #DA0000;
+	font-weight : bold;
+}
+input.searchparamactive {
+	color:  #DA0000;
+	font-weight : bold;
+}
+
+table.errorbox pre
+{
+  text-align: left;
+}
+
+/* an unordered context menu list */
+ul.contextmenulist
+{
+  /*list-style-image: url("../pics/pfeilre.gif");*/
+  list-style-type: none;
+  padding: 0 2px;
+  margin: 5px 0 5px 20px;
+  font-size: 11px;
+  font-weight: normal;
+  color: #333298;
+}
+
+ul.contextmenulist a
+{
+  /*font-weight: bold;*/
+  text-decoration: none;
+}
+
+.timetable-groupstyle0
+{background-color:#CCEEFF}
+
+.timetable-groupstyle1
+{background-color: #EEFFEE;}
+
+.timetable-groupstyle2
+{background-color:#FFF5E6;}
+
+.timetable-groupstyle3
+{background-color: #FFEE99;}
+
+.timetable-groupstyle4
+{background-color: #FFDFCF;}
+
+.timetable-groupstyle5
+{background-color: #CCEECC;}
+
+.timetable-groupstyle6
+{background-color: #CCA9CC;}
+
+.timetable-groupstyle7
+{background-color: #DCAFFF;
+}
+
+.timetable-groupstyle8
+{background-color: #BFE4FF;}
+
+.timetable-groupstyle9
+{background-color: #CCD599;}
+
+.timetable-groupstyle10
+{background-color: #DDCCCC;}
+
+.timetable-groupstyle11
+{background-color: #DCFC9C;}
+
+.timetable-groupstyle12
+{background-color: #CDFCFC;}
+
+.timetable-groupstyle13
+{background-color: #ABEEFF;}
+
+.timetable-groupstyle14
+{background-color: #FFAACC;}
+
+.timetable-groupstyle15
+{background-color: #CCDDCD;}
+
+.timetable-groupstyle16
+{background-color: #FFF0CC;}
+
+.timetable-groupstyle17
+{background-color: #FFCCD2;}
+
+.timetable-groupstyle18
+{background-color: #FDFDA9;}
+
+.timetable-groupstyle19
+{background-color: #FDFDC0;}
+
+.timetable-groupstyle20
+{background-color: #DCFFCC;}
+
+.mapping-from, .mapping-from-button {
+	background: #FFCC80;	
+}
+
+.mapping-to, .mapping-to-button {
+	background: #E1E1E1;
+}
+
+.invisible-layer {
+	background-color: #BCBCBC;
+}
+
+/* timetable weekday header*/
+
+
+th.timetable_weekday_header_lightcell, th.timetable_weekday_header {
+	padding: 3px;
+	color: #060606;
+	background: #f5f9ff;
+}
+
+th.timetable_weekday_header_darkcell {
+	padding: 3px;
+	color: #060606;
+	background: #a5a9aa;
+}
+
+th.timetable_time_header {
+	padding: 3px;
+	color: #060606;
+	background: #E6F0FF;
+}
+
+/* timetable types */
+td.timetable_entry_reg {	
+	border: #ABABAB 1px dotted;	
+}
+td.timetable_entry_assign {	
+	border: #363636 1px solid;
+}
+
+td.timetable_entry_wishlist {
+	border: 1px dotted silver;
+}
+
+
+/* the header of an entry cell */
+tr.timetable_entry_header{	
+	background-color: #E6F0FF;
+}
+
+/* header for a registration */
+td.timetable_entry_reg tr.timetable_entry_header {		
+	background-color: #CACACA;	
+}
+
+/* ================= prerequisites-start =================== */
+/* list for prerequisite-must-classes */
+ul.prereq {
+	padding-left: 0;
+}
+
+/* list-entry for prerequisite-ok */
+ul.prereq li.ok {
+	list-style-image:url(../pics/icon-req-ok.gif);
+}
+
+/* list-entry for prerequisite-not-ok */
+ul.prereq li.notok {
+	list-style-image:url(../pics/icon-req-notok.gif);
+}
+
+/* list-entry for prerequisite-subject */
+ul.prereq li.subject {
+	color:blue;
+}
+/* ================== prerequisites-end ==================== */
+
+/* for the tabbedpanel (new) */
+td.tabbedpanelspacer
+{
+	width: 10px;
+	border-bottom: thin solid #D03B6F;	
+}
+
+.infobox
+{
+	float:right; 
+	background: #def; 
+	margin-bottom: 10px; 
+	border: 1px solid #cdc;
+	padding:2px
+}
+
+ul.error-list
+{
+    list-style-type: square;
+}
+
+/* ============= new styles ========== */
+
+.hideme
+{
+	display: none;
+}
+
+body
+{
+	min-width: 800px;
+}
+
+div.contentcell
+{
+	min-width: 500px; /* = 800px(body) - 150px(menu) - 150px(ctxmenu) */
+}
+
+div.columncell
+{
+	width: 150px;
+}
+
+div.contentfootercell
+{
+	padding: 0 5px;
+}
+
+abbr, acronym 
+{ 
+	border-bottom: 1px dotted #000000; 
+}
+
+#term-selector
+{
+	position: relative;
+	top: 0;
+	right: 2.3em;
+	white-space: nowrap;
+	text-align: right;
+}
+
+#term-selector input 
+{
+	margin-left: 0.3em;
+}
+
+h3.proclamation {
+	padding-top: 10px;
+}
+
+.evasys-btn {
+  background: transparent;
+  border: transparent;
+  padding: 0px;
+}
