@@ -1,0 +1,212 @@
+<!DOCTYPE html>
+<html lang="de">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>KUSSS - LVA-Suche</title>
+  <link rel="stylesheet" href="/common/kusss/styles/kusss.css">
+  <link rel="stylesheet" href="/common/kusss/styles/5browser.css">
+  <link rel="stylesheet" href="/common/kusss/styles/menu.css">
+  <link rel="stylesheet" href="/common/kusss/styles/kusss_interim.css">
+  <link rel="stylesheet" href="/common/kusss/styles/tabbedPanel.css">
+  <style>
+    .main-layout { display: table; width: 100%; border-collapse: collapse; }
+    .main-row { display: table-row; }
+    .menu-column { display: table-cell; width: 180px; vertical-align: top; padding: 10px; }
+    .content-column { display: table-cell; vertical-align: top; padding: 15px; border-left: 1px solid #E6E9EE; }
+    .context-column { display: table-cell; width: 180px; vertical-align: top; padding: 10px; border-left: 1px solid #E6E9EE; }
+    .header-bar { background: #D3D6DB; padding: 10px 15px; border-bottom: 3px solid #D03B6F; }
+    .header-logo { display: flex; align-items: center; justify-content: space-between; }
+    .header-logo h1 { color: #333298; margin: 0; font-size: 1.5em; }
+    .user-info { display: flex; align-items: center; gap: 15px; font-size: 11px; }
+    .footer-bar { background: #E6E9EE; padding: 10px 15px; text-align: center; font-size: 10px; color: #666; border-top: 1px solid #D3D6DB; }
+    .search-form { background: #F5F7F7; padding: 15px; margin-bottom: 20px; border: 1px solid #E6E9EE; }
+    .search-row { display: flex; gap: 15px; flex-wrap: wrap; align-items: center; margin-bottom: 10px; }
+    .search-row label { min-width: 100px; }
+    .lva-table { width: 100%; border-collapse: collapse; }
+    .lva-table th, .lva-table td { padding: 8px; text-align: left; }
+    .lva-table tr:nth-child(even) { background: #F5F7F7; }
+    .lva-table tr:nth-child(odd) { background: #E1E1E1; }
+    .lva-type { display: inline-block; padding: 2px 6px; font-size: 10px; font-weight: bold; border-radius: 3px; }
+    .lva-type-vo { background: #B24372; color: white; }
+    .lva-type-ue { background: #333298; color: white; }
+    .lva-type-kv { background: #157A10; color: white; }
+  </style>
+</head>
+<body>
+  <div class="header-bar">
+    <div class="header-logo">
+      <div style="display: flex; align-items: center; gap: 15px;">
+        <a href="/index.html"><img src="/common/kusss/pics/logos/system_kusss.png" alt="KUSSS Logo" height="40"></a>
+        <h1>KUSSS</h1>
+      </div>
+      <div class="user-info">
+        <span class="loggedin">Angemeldet als: <strong>Max Mustermann</strong></span>
+        <a href="/index.html" class="buttonstyle" style="text-decoration: none; padding: 3px 10px;">Logout</a>
+      </div>
+    </div>
+  </div>
+
+  <div class="main-layout">
+    <div class="main-row">
+      <div class="menu-column menu">
+        <ul class="menu-group">
+          <li class="menu-group"><span class="menu-group">Mein Studium</span>
+            <ul class="menu-item">
+              <li class="menu-item"><a href="/pages/dashboard.html">Dashboard</a></li>
+              <li class="menu-item menu-item-active"><a href="/pages/courses.html">Meine LVAs</a></li>
+              <li class="menu-item"><a href="/pages/schedule.html">Stundenplan</a></li>
+              <li class="menu-item"><a href="/pages/grades.html">Notenspiegel</a></li>
+            </ul>
+          </li>
+        </ul>
+        <ul class="menu-group">
+          <li class="menu-group"><span class="menu-group">Anmeldung</span>
+            <ul class="menu-item">
+              <li class="menu-item"><a href="/pages/registration.html">LVA-Anmeldung</a></li>
+              <li class="menu-item"><a href="/pages/exams.html">Prüfungsanmeldung</a></li>
+            </ul>
+          </li>
+        </ul>
+        <ul class="menu-group">
+          <li class="menu-group"><span class="menu-group">Service</span>
+            <ul class="menu-item">
+              <li class="menu-item"><a href="/pages/certificates.html">Bescheinigungen</a></li>
+              <li class="menu-item"><a href="/pages/profile.html">Profil</a></li>
+            </ul>
+          </li>
+        </ul>
+      </div>
+
+      <div class="content-column">
+        <div class="contentcell">
+          <p class="path" style="text-align: right; margin-bottom: 10px;">
+            <a href="/index.html">Start</a> &gt; <a href="/pages/dashboard.html">Dashboard</a> &gt; <span class="here">LVA-Suche</span>
+          </p>
+
+          <h3>Lehrveranstaltungssuche</h3>
+
+          <div class="search-form">
+            <div class="search-row">
+              <label>Semester:</label>
+              <select class="dropdown">
+                <option>SS 2026</option>
+                <option>WS 2025</option>
+                <option>SS 2025</option>
+              </select>
+              <label>Studienrichtung:</label>
+              <select class="dropdown">
+                <option>Alle</option>
+                <option>Informatik</option>
+                <option>Wirtschaftsinformatik</option>
+                <option>Mathematik</option>
+              </select>
+            </div>
+            <div class="search-row">
+              <label>Suchbegriff:</label>
+              <input type="text" class="inputfields" style="width: 300px;" placeholder="LVA-Titel oder LVA-Nummer">
+              <button class="buttonstyle">Suchen</button>
+            </div>
+          </div>
+
+          <h4>Suchergebnisse (15 LVAs gefunden)</h4>
+          <table class="lva-table">
+            <thead>
+              <tr>
+                <th>LVA-Nr.</th>
+                <th>Titel</th>
+                <th>Typ</th>
+                <th>ECTS</th>
+                <th>Lehrende</th>
+                <th>Aktion</th>
+              </tr>
+            </thead>
+            <tbody>
+              <tr>
+                <td>352.001</td>
+                <td><a href="/pages/course-detail.html">Datenbanksysteme</a></td>
+                <td><span class="lva-type lva-type-vo">VO</span></td>
+                <td>3</td>
+                <td>Univ.-Prof. Dr. Schmidt</td>
+                <td><a href="/pages/registration.html" class="normallinkblue">Anmelden</a></td>
+              </tr>
+              <tr>
+                <td>352.002</td>
+                <td><a href="/pages/course-detail.html">Datenbanksysteme Übung</a></td>
+                <td><span class="lva-type lva-type-ue">UE</span></td>
+                <td>3</td>
+                <td>DI Müller</td>
+                <td><a href="/pages/registration.html" class="normallinkblue">Anmelden</a></td>
+              </tr>
+              <tr>
+                <td>353.010</td>
+                <td><a href="/pages/course-detail.html">Algorithmen und Datenstrukturen</a></td>
+                <td><span class="lva-type lva-type-kv">KV</span></td>
+                <td>6</td>
+                <td>Univ.-Prof. Dr. Weber</td>
+                <td><span class="green">Angemeldet</span></td>
+              </tr>
+              <tr>
+                <td>354.005</td>
+                <td><a href="/pages/course-detail.html">Softwareentwicklung 1</a></td>
+                <td><span class="lva-type lva-type-vo">VO</span></td>
+                <td>3</td>
+                <td>Univ.-Prof. Dr. Bauer</td>
+                <td><span class="green">Angemeldet</span></td>
+              </tr>
+              <tr>
+                <td>354.006</td>
+                <td><a href="/pages/course-detail.html">Softwareentwicklung 1 Übung</a></td>
+                <td><span class="lva-type lva-type-ue">UE</span></td>
+                <td>3</td>
+                <td>Mag. Fischer</td>
+                <td><span class="green">Angemeldet</span></td>
+              </tr>
+              <tr>
+                <td>355.001</td>
+                <td><a href="/pages/course-detail.html">Web Engineering</a></td>
+                <td><span class="lva-type lva-type-kv">KV</span></td>
+                <td>6</td>
+                <td>Univ.-Prof. Dr. Huber</td>
+                <td><a href="/pages/registration.html" class="normallinkblue">Anmelden</a></td>
+              </tr>
+            </tbody>
+          </table>
+
+          <div style="margin-top: 15px; text-align: center;">
+            <span class="paging">
+              <a href="#" class="normallinkblue">&laquo; Zurück</a> |
+              Seite 1 von 3 |
+              <a href="#" class="normallinkblue">Weiter &raquo;</a>
+            </span>
+          </div>
+        </div>
+      </div>
+
+      <div class="context-column contextmenu">
+        <h5>LVA-Typen</h5>
+        <ul class="contextmenulist">
+          <li><span class="lva-type lva-type-vo">VO</span> Vorlesung</li>
+          <li><span class="lva-type lva-type-ue">UE</span> Übung</li>
+          <li><span class="lva-type lva-type-kv">KV</span> Kombi-LVA</li>
+        </ul>
+
+        <h5>Filter</h5>
+        <ul class="contextmenulist">
+          <li><a href="#">Nur Pflichtfächer</a></li>
+          <li><a href="#">Nur Wahlfächer</a></li>
+          <li><a href="#">Freie Plätze</a></li>
+        </ul>
+      </div>
+    </div>
+  </div>
+
+  <div class="footer-bar">
+    <p>KUSSS - Kepler University Study Support System | Lokale Entwicklungsversion</p>
+  </div>
+
+  <script src="/common/kusss/scripts/change.js"></script>
+  <script src="/common/kusss/scripts/popup.js"></script>
+  <script src="/common/kusss/scripts/checkall.js"></script>
+</body>
+</html>

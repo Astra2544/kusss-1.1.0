@@ -1,0 +1,275 @@
+<!DOCTYPE html>
+<html lang="de">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>KUSSS - Notenspiegel</title>
+  <link rel="stylesheet" href="/common/kusss/styles/kusss.css">
+  <link rel="stylesheet" href="/common/kusss/styles/5browser.css">
+  <link rel="stylesheet" href="/common/kusss/styles/menu.css">
+  <link rel="stylesheet" href="/common/kusss/styles/kusss_interim.css">
+  <link rel="stylesheet" href="/common/kusss/styles/tabbedPanel.css">
+  <style>
+    .main-layout { display: table; width: 100%; border-collapse: collapse; }
+    .main-row { display: table-row; }
+    .menu-column { display: table-cell; width: 180px; vertical-align: top; padding: 10px; }
+    .content-column { display: table-cell; vertical-align: top; padding: 15px; border-left: 1px solid #E6E9EE; }
+    .context-column { display: table-cell; width: 180px; vertical-align: top; padding: 10px; border-left: 1px solid #E6E9EE; }
+    .header-bar { background: #D3D6DB; padding: 10px 15px; border-bottom: 3px solid #D03B6F; }
+    .header-logo { display: flex; align-items: center; justify-content: space-between; }
+    .header-logo h1 { color: #333298; margin: 0; font-size: 1.5em; }
+    .user-info { display: flex; align-items: center; gap: 15px; font-size: 11px; }
+    .footer-bar { background: #E6E9EE; padding: 10px 15px; text-align: center; font-size: 10px; color: #666; border-top: 1px solid #D3D6DB; }
+    .grades-table { width: 100%; border-collapse: collapse; }
+    .grades-table th, .grades-table td { padding: 8px; text-align: left; }
+    .grades-table tr:nth-child(even) { background: #F5F7F7; }
+    .grades-table tr:nth-child(odd) { background: #E1E1E1; }
+    .grade { font-weight: bold; text-align: center; }
+    .grade-1 { color: #157A10; }
+    .grade-2 { color: #333298; }
+    .grade-3 { color: #666; }
+    .grade-4 { color: #FF6633; }
+    .grade-5 { color: #DA0000; }
+    .summary-box { background: #F5F7F7; padding: 15px; margin-bottom: 20px; border: 1px solid #E6E9EE; display: flex; justify-content: space-around; }
+    .summary-item { text-align: center; }
+    .summary-value { font-size: 24px; font-weight: bold; color: #333298; }
+    .semester-header { background: #B24372; color: white; padding: 8px 15px; margin-top: 20px; }
+  </style>
+</head>
+<body>
+  <div class="header-bar">
+    <div class="header-logo">
+      <div style="display: flex; align-items: center; gap: 15px;">
+        <a href="/index.html"><img src="/common/kusss/pics/logos/system_kusss.png" alt="KUSSS Logo" height="40"></a>
+        <h1>KUSSS</h1>
+      </div>
+      <div class="user-info">
+        <span class="loggedin">Angemeldet als: <strong>Max Mustermann</strong></span>
+        <a href="/index.html" class="buttonstyle" style="text-decoration: none; padding: 3px 10px;">Logout</a>
+      </div>
+    </div>
+  </div>
+
+  <div class="main-layout">
+    <div class="main-row">
+      <div class="menu-column menu">
+        <ul class="menu-group">
+          <li class="menu-group"><span class="menu-group">Mein Studium</span>
+            <ul class="menu-item">
+              <li class="menu-item"><a href="/pages/dashboard.html">Dashboard</a></li>
+              <li class="menu-item"><a href="/pages/courses.html">Meine LVAs</a></li>
+              <li class="menu-item"><a href="/pages/schedule.html">Stundenplan</a></li>
+              <li class="menu-item menu-item-active"><a href="/pages/grades.html">Notenspiegel</a></li>
+            </ul>
+          </li>
+        </ul>
+        <ul class="menu-group">
+          <li class="menu-group"><span class="menu-group">Anmeldung</span>
+            <ul class="menu-item">
+              <li class="menu-item"><a href="/pages/registration.html">LVA-Anmeldung</a></li>
+              <li class="menu-item"><a href="/pages/exams.html">Prüfungsanmeldung</a></li>
+            </ul>
+          </li>
+        </ul>
+        <ul class="menu-group">
+          <li class="menu-group"><span class="menu-group">Service</span>
+            <ul class="menu-item">
+              <li class="menu-item"><a href="/pages/certificates.html">Bescheinigungen</a></li>
+              <li class="menu-item"><a href="/pages/profile.html">Profil</a></li>
+            </ul>
+          </li>
+        </ul>
+      </div>
+
+      <div class="content-column">
+        <div class="contentcell">
+          <p class="path" style="text-align: right; margin-bottom: 10px;">
+            <a href="/index.html">Start</a> &gt; <a href="/pages/dashboard.html">Dashboard</a> &gt; <span class="here">Notenspiegel</span>
+          </p>
+
+          <h3>Mein Notenspiegel</h3>
+
+          <div class="summary-box">
+            <div class="summary-item">
+              <div class="summary-value">120</div>
+              <div>ECTS erworben</div>
+            </div>
+            <div class="summary-item">
+              <div class="summary-value">2.1</div>
+              <div>Notendurchschnitt</div>
+            </div>
+            <div class="summary-item">
+              <div class="summary-value">24</div>
+              <div>Prüfungen bestanden</div>
+            </div>
+            <div class="summary-item">
+              <div class="summary-value">66%</div>
+              <div>Studienfortschritt</div>
+            </div>
+          </div>
+
+          <div class="semester-header">WS 2025</div>
+          <table class="grades-table">
+            <thead>
+              <tr>
+                <th>LVA-Nr.</th>
+                <th>Titel</th>
+                <th>Typ</th>
+                <th>ECTS</th>
+                <th>Note</th>
+                <th>Datum</th>
+              </tr>
+            </thead>
+            <tbody>
+              <tr>
+                <td>350.001</td>
+                <td>Einführung in die Programmierung</td>
+                <td>KV</td>
+                <td>6</td>
+                <td class="grade grade-1">1</td>
+                <td>20.01.2026</td>
+              </tr>
+              <tr>
+                <td>350.010</td>
+                <td>Mathematik für Informatiker 1</td>
+                <td>VO</td>
+                <td>4.5</td>
+                <td class="grade grade-2">2</td>
+                <td>15.01.2026</td>
+              </tr>
+              <tr>
+                <td>350.011</td>
+                <td>Mathematik für Informatiker 1 Übung</td>
+                <td>UE</td>
+                <td>1.5</td>
+                <td class="grade grade-2">2</td>
+                <td>18.01.2026</td>
+              </tr>
+              <tr>
+                <td>351.005</td>
+                <td>Technische Grundlagen der Informatik</td>
+                <td>VO</td>
+                <td>3</td>
+                <td class="grade grade-3">3</td>
+                <td>22.01.2026</td>
+              </tr>
+            </tbody>
+          </table>
+
+          <div class="semester-header">SS 2025</div>
+          <table class="grades-table">
+            <thead>
+              <tr>
+                <th>LVA-Nr.</th>
+                <th>Titel</th>
+                <th>Typ</th>
+                <th>ECTS</th>
+                <th>Note</th>
+                <th>Datum</th>
+              </tr>
+            </thead>
+            <tbody>
+              <tr>
+                <td>351.001</td>
+                <td>Objektorientierte Programmierung</td>
+                <td>KV</td>
+                <td>6</td>
+                <td class="grade grade-1">1</td>
+                <td>25.06.2025</td>
+              </tr>
+              <tr>
+                <td>351.010</td>
+                <td>Mathematik für Informatiker 2</td>
+                <td>VO</td>
+                <td>4.5</td>
+                <td class="grade grade-2">2</td>
+                <td>20.06.2025</td>
+              </tr>
+              <tr>
+                <td>351.015</td>
+                <td>Betriebssysteme</td>
+                <td>VO</td>
+                <td>3</td>
+                <td class="grade grade-2">2</td>
+                <td>28.06.2025</td>
+              </tr>
+              <tr>
+                <td>351.020</td>
+                <td>Rechnernetze</td>
+                <td>KV</td>
+                <td>6</td>
+                <td class="grade grade-3">3</td>
+                <td>30.06.2025</td>
+              </tr>
+            </tbody>
+          </table>
+
+          <div class="semester-header">WS 2024</div>
+          <table class="grades-table">
+            <thead>
+              <tr>
+                <th>LVA-Nr.</th>
+                <th>Titel</th>
+                <th>Typ</th>
+                <th>ECTS</th>
+                <th>Note</th>
+                <th>Datum</th>
+              </tr>
+            </thead>
+            <tbody>
+              <tr>
+                <td>349.001</td>
+                <td>Grundlagen der Informatik</td>
+                <td>VO</td>
+                <td>3</td>
+                <td class="grade grade-1">1</td>
+                <td>28.01.2025</td>
+              </tr>
+              <tr>
+                <td>349.005</td>
+                <td>Diskrete Mathematik</td>
+                <td>KV</td>
+                <td>6</td>
+                <td class="grade grade-2">2</td>
+                <td>25.01.2025</td>
+              </tr>
+            </tbody>
+          </table>
+        </div>
+      </div>
+
+      <div class="context-column contextmenu">
+        <h5>Export</h5>
+        <ul class="contextmenulist">
+          <li><a href="#">Als PDF</a></li>
+          <li><a href="#">Sammelzeugnis</a></li>
+        </ul>
+
+        <h5>Filter</h5>
+        <ul class="contextmenulist">
+          <li><a href="#">Alle Semester</a></li>
+          <li><a href="#">Nur Pflichtfächer</a></li>
+          <li><a href="#">Nur Wahlfächer</a></li>
+        </ul>
+
+        <h5>Statistik</h5>
+        <div class="border" style="padding: 10px; font-size: 10px;">
+          <p><strong>Notenverteilung:</strong></p>
+          <p>Sehr gut (1): 4</p>
+          <p>Gut (2): 6</p>
+          <p>Befriedigend (3): 3</p>
+          <p>Genügend (4): 0</p>
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <div class="footer-bar">
+    <p>KUSSS - Kepler University Study Support System | Lokale Entwicklungsversion</p>
+  </div>
+
+  <script src="/common/kusss/scripts/change.js"></script>
+  <script src="/common/kusss/scripts/popup.js"></script>
+  <script src="/common/kusss/scripts/checkall.js"></script>
+</body>
+</html>

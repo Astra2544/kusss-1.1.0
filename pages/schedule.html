@@ -1,0 +1,238 @@
+<!DOCTYPE html>
+<html lang="de">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>KUSSS - Stundenplan</title>
+  <link rel="stylesheet" href="/common/kusss/styles/kusss.css">
+  <link rel="stylesheet" href="/common/kusss/styles/5browser.css">
+  <link rel="stylesheet" href="/common/kusss/styles/menu.css">
+  <link rel="stylesheet" href="/common/kusss/styles/kusss_interim.css">
+  <link rel="stylesheet" href="/common/kusss/styles/tabbedPanel.css">
+  <style>
+    .main-layout { display: table; width: 100%; border-collapse: collapse; }
+    .main-row { display: table-row; }
+    .menu-column { display: table-cell; width: 180px; vertical-align: top; padding: 10px; }
+    .content-column { display: table-cell; vertical-align: top; padding: 15px; border-left: 1px solid #E6E9EE; }
+    .context-column { display: table-cell; width: 180px; vertical-align: top; padding: 10px; border-left: 1px solid #E6E9EE; }
+    .header-bar { background: #D3D6DB; padding: 10px 15px; border-bottom: 3px solid #D03B6F; }
+    .header-logo { display: flex; align-items: center; justify-content: space-between; }
+    .header-logo h1 { color: #333298; margin: 0; font-size: 1.5em; }
+    .user-info { display: flex; align-items: center; gap: 15px; font-size: 11px; }
+    .footer-bar { background: #E6E9EE; padding: 10px 15px; text-align: center; font-size: 10px; color: #666; border-top: 1px solid #D3D6DB; }
+    .schedule-table { width: 100%; border-collapse: collapse; table-layout: fixed; }
+    .schedule-table th { padding: 8px; text-align: center; }
+    .schedule-table td { padding: 4px; vertical-align: top; height: 60px; border: 1px solid #D3D6DB; }
+    .schedule-table .time-col { width: 60px; text-align: center; font-size: 10px; background: #E6F0FF; }
+    .schedule-event { padding: 4px; margin: 2px; font-size: 10px; border-radius: 3px; }
+    .week-nav { display: flex; justify-content: space-between; align-items: center; margin-bottom: 15px; padding: 10px; background: #F5F7F7; }
+  </style>
+</head>
+<body>
+  <div class="header-bar">
+    <div class="header-logo">
+      <div style="display: flex; align-items: center; gap: 15px;">
+        <a href="/index.html"><img src="/common/kusss/pics/logos/system_kusss.png" alt="KUSSS Logo" height="40"></a>
+        <h1>KUSSS</h1>
+      </div>
+      <div class="user-info">
+        <span class="loggedin">Angemeldet als: <strong>Max Mustermann</strong></span>
+        <a href="/index.html" class="buttonstyle" style="text-decoration: none; padding: 3px 10px;">Logout</a>
+      </div>
+    </div>
+  </div>
+
+  <div class="main-layout">
+    <div class="main-row">
+      <div class="menu-column menu">
+        <ul class="menu-group">
+          <li class="menu-group"><span class="menu-group">Mein Studium</span>
+            <ul class="menu-item">
+              <li class="menu-item"><a href="/pages/dashboard.html">Dashboard</a></li>
+              <li class="menu-item"><a href="/pages/courses.html">Meine LVAs</a></li>
+              <li class="menu-item menu-item-active"><a href="/pages/schedule.html">Stundenplan</a></li>
+              <li class="menu-item"><a href="/pages/grades.html">Notenspiegel</a></li>
+            </ul>
+          </li>
+        </ul>
+        <ul class="menu-group">
+          <li class="menu-group"><span class="menu-group">Anmeldung</span>
+            <ul class="menu-item">
+              <li class="menu-item"><a href="/pages/registration.html">LVA-Anmeldung</a></li>
+              <li class="menu-item"><a href="/pages/exams.html">Prüfungsanmeldung</a></li>
+            </ul>
+          </li>
+        </ul>
+        <ul class="menu-group">
+          <li class="menu-group"><span class="menu-group">Service</span>
+            <ul class="menu-item">
+              <li class="menu-item"><a href="/pages/certificates.html">Bescheinigungen</a></li>
+              <li class="menu-item"><a href="/pages/profile.html">Profil</a></li>
+            </ul>
+          </li>
+        </ul>
+      </div>
+
+      <div class="content-column">
+        <div class="contentcell">
+          <p class="path" style="text-align: right; margin-bottom: 10px;">
+            <a href="/index.html">Start</a> &gt; <a href="/pages/dashboard.html">Dashboard</a> &gt; <span class="here">Stundenplan</span>
+          </p>
+
+          <h3>Mein Stundenplan</h3>
+
+          <div class="week-nav">
+            <a href="#" class="buttonstyle" style="text-decoration: none;">&laquo; Vorherige Woche</a>
+            <strong>KW 6: 03.02.2026 - 07.02.2026</strong>
+            <a href="#" class="buttonstyle" style="text-decoration: none;">Nächste Woche &raquo;</a>
+          </div>
+
+          <table class="schedule-table">
+            <thead>
+              <tr>
+                <th class="timetable_weekday_header"></th>
+                <th class="timetable_weekday_header">Montag<br><small>03.02.</small></th>
+                <th class="timetable_weekday_header">Dienstag<br><small>04.02.</small></th>
+                <th class="timetable_weekday_header">Mittwoch<br><small>05.02.</small></th>
+                <th class="timetable_weekday_header">Donnerstag<br><small>06.02.</small></th>
+                <th class="timetable_weekday_header">Freitag<br><small>07.02.</small></th>
+              </tr>
+            </thead>
+            <tbody>
+              <tr>
+                <td class="time-col timetable_time_header">08:00<br>-<br>09:30</td>
+                <td></td>
+                <td>
+                  <div class="schedule-event timetable-groupstyle0">
+                    <strong>Algorithmen</strong><br>
+                    HS 1<br>
+                    <small>Prof. Weber</small>
+                  </div>
+                </td>
+                <td></td>
+                <td>
+                  <div class="schedule-event timetable-groupstyle0">
+                    <strong>Algorithmen</strong><br>
+                    HS 1<br>
+                    <small>Prof. Weber</small>
+                  </div>
+                </td>
+                <td></td>
+              </tr>
+              <tr>
+                <td class="time-col timetable_time_header">10:00<br>-<br>11:30</td>
+                <td>
+                  <div class="schedule-event timetable-groupstyle1">
+                    <strong>Datenbanken</strong><br>
+                    HS 2<br>
+                    <small>Prof. Schmidt</small>
+                  </div>
+                </td>
+                <td></td>
+                <td>
+                  <div class="schedule-event timetable-groupstyle1">
+                    <strong>Datenbanken</strong><br>
+                    HS 2<br>
+                    <small>Prof. Schmidt</small>
+                  </div>
+                </td>
+                <td></td>
+                <td>
+                  <div class="schedule-event timetable-groupstyle2">
+                    <strong>Web Eng.</strong><br>
+                    PC-Lab<br>
+                    <small>Prof. Huber</small>
+                  </div>
+                </td>
+              </tr>
+              <tr>
+                <td class="time-col timetable_time_header">12:00<br>-<br>13:30</td>
+                <td></td>
+                <td></td>
+                <td></td>
+                <td></td>
+                <td></td>
+              </tr>
+              <tr>
+                <td class="time-col timetable_time_header">14:00<br>-<br>15:30</td>
+                <td></td>
+                <td>
+                  <div class="schedule-event timetable-groupstyle3">
+                    <strong>SE 1 Übung</strong><br>
+                    PC-Lab 1<br>
+                    <small>Mag. Fischer</small>
+                  </div>
+                </td>
+                <td></td>
+                <td>
+                  <div class="schedule-event timetable-groupstyle4">
+                    <strong>DB Übung</strong><br>
+                    PC-Lab 2<br>
+                    <small>DI Müller</small>
+                  </div>
+                </td>
+                <td></td>
+              </tr>
+              <tr>
+                <td class="time-col timetable_time_header">16:00<br>-<br>17:30</td>
+                <td>
+                  <div class="schedule-event timetable-groupstyle5">
+                    <strong>SE 1 VO</strong><br>
+                    HS 3<br>
+                    <small>Prof. Bauer</small>
+                  </div>
+                </td>
+                <td></td>
+                <td>
+                  <div class="schedule-event timetable-groupstyle5">
+                    <strong>SE 1 VO</strong><br>
+                    HS 3<br>
+                    <small>Prof. Bauer</small>
+                  </div>
+                </td>
+                <td></td>
+                <td></td>
+              </tr>
+            </tbody>
+          </table>
+
+          <div style="margin-top: 20px;">
+            <h4>Legende</h4>
+            <div style="display: flex; gap: 15px; flex-wrap: wrap;">
+              <span><span class="schedule-event timetable-groupstyle0" style="display: inline-block;">■</span> Algorithmen</span>
+              <span><span class="schedule-event timetable-groupstyle1" style="display: inline-block;">■</span> Datenbanken</span>
+              <span><span class="schedule-event timetable-groupstyle2" style="display: inline-block;">■</span> Web Engineering</span>
+              <span><span class="schedule-event timetable-groupstyle3" style="display: inline-block;">■</span> SE 1 Übung</span>
+              <span><span class="schedule-event timetable-groupstyle4" style="display: inline-block;">■</span> DB Übung</span>
+              <span><span class="schedule-event timetable-groupstyle5" style="display: inline-block;">■</span> SE 1 VO</span>
+            </div>
+          </div>
+        </div>
+      </div>
+
+      <div class="context-column contextmenu">
+        <h5>Ansicht</h5>
+        <ul class="contextmenulist">
+          <li><a href="#">Wochenansicht</a></li>
+          <li><a href="#">Monatsansicht</a></li>
+          <li><a href="#">Listenansicht</a></li>
+        </ul>
+
+        <h5>Export</h5>
+        <ul class="contextmenulist">
+          <li><a href="#">Als PDF</a></li>
+          <li><a href="#">iCal Export</a></li>
+        </ul>
+      </div>
+    </div>
+  </div>
+
+  <div class="footer-bar">
+    <p>KUSSS - Kepler University Study Support System | Lokale Entwicklungsversion</p>
+  </div>
+
+  <script src="/common/kusss/scripts/change.js"></script>
+  <script src="/common/kusss/scripts/popup.js"></script>
+  <script src="/common/kusss/scripts/checkall.js"></script>
+</body>
+</html>

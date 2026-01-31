@@ -1,0 +1,14 @@
+{
+  "name": "kusss-local",
+  "version": "1.0.0",
+  "description": "KUSSS - Kepler University Study Support System (Local Development)",
+  "type": "module",
+  "scripts": {
+    "dev": "vite",
+    "build": "vite build && cp -r common dist/",
+    "preview": "vite preview"
+  },
+  "devDependencies": {
+    "vite": "^5.4.2"
+  }
+}

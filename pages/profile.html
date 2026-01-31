@@ -1,0 +1,181 @@
+<!DOCTYPE html>
+<html lang="de">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>KUSSS - Profil</title>
+  <link rel="stylesheet" href="/common/kusss/styles/kusss.css">
+  <link rel="stylesheet" href="/common/kusss/styles/5browser.css">
+  <link rel="stylesheet" href="/common/kusss/styles/menu.css">
+  <link rel="stylesheet" href="/common/kusss/styles/kusss_interim.css">
+  <link rel="stylesheet" href="/common/kusss/styles/tabbedPanel.css">
+  <style>
+    .main-layout { display: table; width: 100%; border-collapse: collapse; }
+    .main-row { display: table-row; }
+    .menu-column { display: table-cell; width: 180px; vertical-align: top; padding: 10px; }
+    .content-column { display: table-cell; vertical-align: top; padding: 15px; border-left: 1px solid #E6E9EE; }
+    .context-column { display: table-cell; width: 180px; vertical-align: top; padding: 10px; border-left: 1px solid #E6E9EE; }
+    .header-bar { background: #D3D6DB; padding: 10px 15px; border-bottom: 3px solid #D03B6F; }
+    .header-logo { display: flex; align-items: center; justify-content: space-between; }
+    .header-logo h1 { color: #333298; margin: 0; font-size: 1.5em; }
+    .user-info { display: flex; align-items: center; gap: 15px; font-size: 11px; }
+    .footer-bar { background: #E6E9EE; padding: 10px 15px; text-align: center; font-size: 10px; color: #666; border-top: 1px solid #D3D6DB; }
+    .profile-section { background: #F5F7F7; padding: 15px; margin-bottom: 20px; border: 1px solid #E6E9EE; }
+    .profile-section h4 { margin-top: 0; color: #333298; border-bottom: 1px solid #D3D6DB; padding-bottom: 8px; }
+    .form-row { display: flex; margin-bottom: 10px; }
+    .form-row label { width: 150px; font-weight: bold; }
+    .form-row span { flex: 1; }
+  </style>
+</head>
+<body>
+  <div class="header-bar">
+    <div class="header-logo">
+      <div style="display: flex; align-items: center; gap: 15px;">
+        <a href="/index.html"><img src="/common/kusss/pics/logos/system_kusss.png" alt="KUSSS Logo" height="40"></a>
+        <h1>KUSSS</h1>
+      </div>
+      <div class="user-info">
+        <span class="loggedin">Angemeldet als: <strong>Max Mustermann</strong></span>
+        <a href="/index.html" class="buttonstyle" style="text-decoration: none; padding: 3px 10px;">Logout</a>
+      </div>
+    </div>
+  </div>
+
+  <div class="main-layout">
+    <div class="main-row">
+      <div class="menu-column menu">
+        <ul class="menu-group">
+          <li class="menu-group"><span class="menu-group">Mein Studium</span>
+            <ul class="menu-item">
+              <li class="menu-item"><a href="/pages/dashboard.html">Dashboard</a></li>
+              <li class="menu-item"><a href="/pages/courses.html">Meine LVAs</a></li>
+              <li class="menu-item"><a href="/pages/schedule.html">Stundenplan</a></li>
+              <li class="menu-item"><a href="/pages/grades.html">Notenspiegel</a></li>
+            </ul>
+          </li>
+        </ul>
+        <ul class="menu-group">
+          <li class="menu-group"><span class="menu-group">Anmeldung</span>
+            <ul class="menu-item">
+              <li class="menu-item"><a href="/pages/registration.html">LVA-Anmeldung</a></li>
+              <li class="menu-item"><a href="/pages/exams.html">Prüfungsanmeldung</a></li>
+            </ul>
+          </li>
+        </ul>
+        <ul class="menu-group">
+          <li class="menu-group"><span class="menu-group">Service</span>
+            <ul class="menu-item">
+              <li class="menu-item"><a href="/pages/certificates.html">Bescheinigungen</a></li>
+              <li class="menu-item menu-item-active"><a href="/pages/profile.html">Profil</a></li>
+            </ul>
+          </li>
+        </ul>
+      </div>
+
+      <div class="content-column">
+        <div class="contentcell">
+          <p class="path" style="text-align: right; margin-bottom: 10px;">
+            <a href="/index.html">Start</a> &gt; <a href="/pages/dashboard.html">Dashboard</a> &gt; <span class="here">Profil</span>
+          </p>
+
+          <h3>Mein Profil</h3>
+
+          <div class="profile-section">
+            <h4>Persönliche Daten</h4>
+            <div class="form-row">
+              <label>Name:</label>
+              <span>Max Mustermann</span>
+            </div>
+            <div class="form-row">
+              <label>Matrikelnummer:</label>
+              <span>k12345678</span>
+            </div>
+            <div class="form-row">
+              <label>Geburtsdatum:</label>
+              <span>01.01.2000</span>
+            </div>
+            <div class="form-row">
+              <label>E-Mail (JKU):</label>
+              <span>max.mustermann@students.jku.at</span>
+            </div>
+          </div>
+
+          <div class="profile-section">
+            <h4>Kontaktdaten</h4>
+            <div class="form-row">
+              <label>Adresse:</label>
+              <span>Musterstraße 1, 4020 Linz</span>
+            </div>
+            <div class="form-row">
+              <label>Telefon:</label>
+              <span>+43 660 1234567</span>
+            </div>
+            <div class="form-row">
+              <label>Private E-Mail:</label>
+              <span>max.mustermann@gmail.com</span>
+            </div>
+            <button class="buttonstyle" style="margin-top: 10px;">Kontaktdaten ändern</button>
+          </div>
+
+          <div class="profile-section">
+            <h4>Studium</h4>
+            <div class="form-row">
+              <label>Studienrichtung:</label>
+              <span>Informatik (Bachelor)</span>
+            </div>
+            <div class="form-row">
+              <label>Studienkennzahl:</label>
+              <span>521</span>
+            </div>
+            <div class="form-row">
+              <label>Studienbeginn:</label>
+              <span>WS 2023</span>
+            </div>
+            <div class="form-row">
+              <label>Aktuelles Semester:</label>
+              <span>5. Semester</span>
+            </div>
+            <div class="form-row">
+              <label>Status:</label>
+              <span class="green">Aktiv</span>
+            </div>
+          </div>
+
+          <div class="profile-section">
+            <h4>Passwort ändern</h4>
+            <div class="form-row">
+              <label>Aktuelles Passwort:</label>
+              <input type="password" class="inputfields">
+            </div>
+            <div class="form-row">
+              <label>Neues Passwort:</label>
+              <input type="password" class="inputfields">
+            </div>
+            <div class="form-row">
+              <label>Passwort bestätigen:</label>
+              <input type="password" class="inputfields">
+            </div>
+            <button class="buttonstyle" style="margin-top: 10px;">Passwort ändern</button>
+          </div>
+        </div>
+      </div>
+
+      <div class="context-column contextmenu">
+        <h5>Hilfe</h5>
+        <ul class="contextmenulist">
+          <li><a href="/pages/help.html">FAQ</a></li>
+          <li><a href="/pages/contact.html">Support</a></li>
+        </ul>
+      </div>
+    </div>
+  </div>
+
+  <div class="footer-bar">
+    <p>KUSSS - Kepler University Study Support System | Lokale Entwicklungsversion</p>
+  </div>
+
+  <script src="/common/kusss/scripts/change.js"></script>
+  <script src="/common/kusss/scripts/popup.js"></script>
+  <script src="/common/kusss/scripts/checkall.js"></script>
+</body>
+</html>

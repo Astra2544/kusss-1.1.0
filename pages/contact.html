@@ -1,0 +1,154 @@
+<!DOCTYPE html>
+<html lang="de">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>KUSSS - Kontakt</title>
+  <link rel="stylesheet" href="/common/kusss/styles/kusss.css">
+  <link rel="stylesheet" href="/common/kusss/styles/5browser.css">
+  <link rel="stylesheet" href="/common/kusss/styles/menu.css">
+  <link rel="stylesheet" href="/common/kusss/styles/kusss_interim.css">
+  <link rel="stylesheet" href="/common/kusss/styles/tabbedPanel.css">
+  <style>
+    .main-layout { display: table; width: 100%; border-collapse: collapse; }
+    .main-row { display: table-row; }
+    .menu-column { display: table-cell; width: 180px; vertical-align: top; padding: 10px; }
+    .content-column { display: table-cell; vertical-align: top; padding: 15px; border-left: 1px solid #E6E9EE; }
+    .context-column { display: table-cell; width: 180px; vertical-align: top; padding: 10px; border-left: 1px solid #E6E9EE; }
+    .header-bar { background: #D3D6DB; padding: 10px 15px; border-bottom: 3px solid #D03B6F; }
+    .header-logo { display: flex; align-items: center; justify-content: space-between; }
+    .header-logo h1 { color: #333298; margin: 0; font-size: 1.5em; }
+    .footer-bar { background: #E6E9EE; padding: 10px 15px; text-align: center; font-size: 10px; color: #666; border-top: 1px solid #D3D6DB; }
+    .contact-card { background: #F5F7F7; padding: 15px; margin-bottom: 15px; border: 1px solid #E6E9EE; }
+    .contact-card h4 { color: #333298; margin-top: 0; }
+    .contact-form { background: #F5F7F7; padding: 20px; border: 1px solid #E6E9EE; }
+    .form-group { margin-bottom: 15px; }
+    .form-group label { display: block; margin-bottom: 5px; font-weight: bold; }
+    .form-group input, .form-group textarea, .form-group select { width: 100%; max-width: 400px; }
+    .form-group textarea { height: 150px; }
+  </style>
+</head>
+<body>
+  <div class="header-bar">
+    <div class="header-logo">
+      <div style="display: flex; align-items: center; gap: 15px;">
+        <a href="/index.html"><img src="/common/kusss/pics/logos/system_kusss.png" alt="KUSSS Logo" height="40"></a>
+        <h1>KUSSS</h1>
+      </div>
+      <div style="font-size: 11px;">
+        <a href="/index.html" class="buttonstyle" style="text-decoration: none; padding: 3px 10px;">Login</a>
+      </div>
+    </div>
+  </div>
+
+  <div class="main-layout">
+    <div class="main-row">
+      <div class="menu-column menu">
+        <ul class="menu-group">
+          <li class="menu-group"><span class="menu-group">Information</span>
+            <ul class="menu-item">
+              <li class="menu-item"><a href="/pages/news.html">Aktuelles</a></li>
+              <li class="menu-item"><a href="/pages/help.html">Hilfe</a></li>
+              <li class="menu-item menu-item-active"><a href="/pages/contact.html">Kontakt</a></li>
+            </ul>
+          </li>
+        </ul>
+        <ul class="menu-group">
+          <li class="menu-group"><span class="menu-group">Studium</span>
+            <ul class="menu-item">
+              <li class="menu-item"><a href="/pages/courses.html">LVA-Suche</a></li>
+              <li class="menu-item"><a href="/pages/schedule.html">Stundenplan</a></li>
+              <li class="menu-item"><a href="/pages/exams.html">Prüfungen</a></li>
+            </ul>
+          </li>
+        </ul>
+      </div>
+
+      <div class="content-column">
+        <div class="contentcell">
+          <p class="path" style="text-align: right; margin-bottom: 10px;">
+            <a href="/index.html">Start</a> &gt; <span class="here">Kontakt</span>
+          </p>
+
+          <h3>Kontakt</h3>
+
+          <div style="display: grid; grid-template-columns: repeat(auto-fit, minmax(250px, 1fr)); gap: 15px; margin-bottom: 20px;">
+            <div class="contact-card">
+              <h4>KUSSS-Support</h4>
+              <p><strong>E-Mail:</strong> kusss@jku.at</p>
+              <p><strong>Telefon:</strong> +43 732 2468-0</p>
+              <p><strong>Öffnungszeiten:</strong><br>Mo-Fr: 09:00 - 12:00 Uhr</p>
+            </div>
+
+            <div class="contact-card">
+              <h4>Studienservices</h4>
+              <p><strong>E-Mail:</strong> studienservices@jku.at</p>
+              <p><strong>Telefon:</strong> +43 732 2468-1000</p>
+              <p><strong>Öffnungszeiten:</strong><br>Mo-Do: 09:00 - 15:00 Uhr</p>
+            </div>
+
+            <div class="contact-card">
+              <h4>IT-Services</h4>
+              <p><strong>E-Mail:</strong> it-support@jku.at</p>
+              <p><strong>Telefon:</strong> +43 732 2468-4242</p>
+              <p><strong>Öffnungszeiten:</strong><br>Mo-Fr: 08:00 - 17:00 Uhr</p>
+            </div>
+          </div>
+
+          <h4>Kontaktformular</h4>
+          <div class="contact-form">
+            <div class="form-group">
+              <label>Betreff:</label>
+              <select class="dropdown">
+                <option>-- Bitte wählen --</option>
+                <option>Technisches Problem</option>
+                <option>Frage zur LVA-Anmeldung</option>
+                <option>Frage zur Prüfungsanmeldung</option>
+                <option>Sonstiges</option>
+              </select>
+            </div>
+            <div class="form-group">
+              <label>Name:</label>
+              <input type="text" class="inputfields">
+            </div>
+            <div class="form-group">
+              <label>E-Mail:</label>
+              <input type="email" class="inputfields">
+            </div>
+            <div class="form-group">
+              <label>Matrikelnummer (optional):</label>
+              <input type="text" class="inputfields">
+            </div>
+            <div class="form-group">
+              <label>Nachricht:</label>
+              <textarea class="inputfields"></textarea>
+            </div>
+            <button class="buttonstyle">Absenden</button>
+          </div>
+        </div>
+      </div>
+
+      <div class="context-column contextmenu">
+        <h5>Schnellhilfe</h5>
+        <ul class="contextmenulist">
+          <li><a href="/pages/help.html">FAQ lesen</a></li>
+        </ul>
+
+        <h5>Adresse</h5>
+        <div class="border" style="padding: 10px; font-size: 10px;">
+          <p><strong>Johannes Kepler Universität Linz</strong></p>
+          <p>Altenberger Straße 69<br>4040 Linz<br>Österreich</p>
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <div class="footer-bar">
+    <p>KUSSS - Kepler University Study Support System | Lokale Entwicklungsversion</p>
+  </div>
+
+  <script src="/common/kusss/scripts/change.js"></script>
+  <script src="/common/kusss/scripts/popup.js"></script>
+  <script src="/common/kusss/scripts/checkall.js"></script>
+</body>
+</html>

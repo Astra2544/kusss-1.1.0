@@ -1,0 +1,223 @@
+<!DOCTYPE html>
+<html lang="de">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>KUSSS - LVA-Details</title>
+  <link rel="stylesheet" href="/common/kusss/styles/kusss.css">
+  <link rel="stylesheet" href="/common/kusss/styles/5browser.css">
+  <link rel="stylesheet" href="/common/kusss/styles/menu.css">
+  <link rel="stylesheet" href="/common/kusss/styles/kusss_interim.css">
+  <link rel="stylesheet" href="/common/kusss/styles/tabbedPanel.css">
+  <style>
+    .main-layout { display: table; width: 100%; border-collapse: collapse; }
+    .main-row { display: table-row; }
+    .menu-column { display: table-cell; width: 180px; vertical-align: top; padding: 10px; }
+    .content-column { display: table-cell; vertical-align: top; padding: 15px; border-left: 1px solid #E6E9EE; }
+    .context-column { display: table-cell; width: 180px; vertical-align: top; padding: 10px; border-left: 1px solid #E6E9EE; }
+    .header-bar { background: #D3D6DB; padding: 10px 15px; border-bottom: 3px solid #D03B6F; }
+    .header-logo { display: flex; align-items: center; justify-content: space-between; }
+    .header-logo h1 { color: #333298; margin: 0; font-size: 1.5em; }
+    .user-info { display: flex; align-items: center; gap: 15px; font-size: 11px; }
+    .footer-bar { background: #E6E9EE; padding: 10px 15px; text-align: center; font-size: 10px; color: #666; border-top: 1px solid #D3D6DB; }
+    .detail-section { margin-bottom: 20px; }
+    .detail-section h4 { background: #B24372; color: white; padding: 8px 15px; margin-bottom: 0; }
+    .detail-content { background: #F5F7F7; padding: 15px; border: 1px solid #E6E9EE; border-top: none; }
+    .detail-row { display: flex; padding: 8px 0; border-bottom: 1px dotted #D3D6DB; }
+    .detail-row:last-child { border-bottom: none; }
+    .detail-label { width: 180px; font-weight: bold; color: #333298; }
+    .detail-value { flex: 1; }
+    .term-table { width: 100%; border-collapse: collapse; margin-top: 10px; }
+    .term-table th, .term-table td { padding: 8px; text-align: left; border: 1px solid #D3D6DB; }
+    .term-table th { background: #E6E9EE; }
+  </style>
+</head>
+<body>
+  <div class="header-bar">
+    <div class="header-logo">
+      <div style="display: flex; align-items: center; gap: 15px;">
+        <a href="/index.html"><img src="/common/kusss/pics/logos/system_kusss.png" alt="KUSSS Logo" height="40"></a>
+        <h1>KUSSS</h1>
+      </div>
+      <div class="user-info">
+        <span class="loggedin">Angemeldet als: <strong>Max Mustermann</strong></span>
+        <a href="/index.html" class="buttonstyle" style="text-decoration: none; padding: 3px 10px;">Logout</a>
+      </div>
+    </div>
+  </div>
+
+  <div class="main-layout">
+    <div class="main-row">
+      <div class="menu-column menu">
+        <ul class="menu-group">
+          <li class="menu-group"><span class="menu-group">Mein Studium</span>
+            <ul class="menu-item">
+              <li class="menu-item"><a href="/pages/dashboard.html">Dashboard</a></li>
+              <li class="menu-item menu-item-active"><a href="/pages/courses.html">Meine LVAs</a></li>
+              <li class="menu-item"><a href="/pages/schedule.html">Stundenplan</a></li>
+              <li class="menu-item"><a href="/pages/grades.html">Notenspiegel</a></li>
+            </ul>
+          </li>
+        </ul>
+        <ul class="menu-group">
+          <li class="menu-group"><span class="menu-group">Anmeldung</span>
+            <ul class="menu-item">
+              <li class="menu-item"><a href="/pages/registration.html">LVA-Anmeldung</a></li>
+              <li class="menu-item"><a href="/pages/exams.html">Prüfungsanmeldung</a></li>
+            </ul>
+          </li>
+        </ul>
+      </div>
+
+      <div class="content-column">
+        <div class="contentcell">
+          <p class="path" style="text-align: right; margin-bottom: 10px;">
+            <a href="/index.html">Start</a> &gt; <a href="/pages/courses.html">LVA-Suche</a> &gt; <span class="here">Datenbanksysteme</span>
+          </p>
+
+          <h3>352.001 - Datenbanksysteme</h3>
+
+          <div class="detail-section">
+            <h4>Allgemeine Informationen</h4>
+            <div class="detail-content">
+              <div class="detail-row">
+                <span class="detail-label">LVA-Nummer:</span>
+                <span class="detail-value">352.001</span>
+              </div>
+              <div class="detail-row">
+                <span class="detail-label">Titel:</span>
+                <span class="detail-value">Datenbanksysteme</span>
+              </div>
+              <div class="detail-row">
+                <span class="detail-label">LVA-Typ:</span>
+                <span class="detail-value">Vorlesung (VO)</span>
+              </div>
+              <div class="detail-row">
+                <span class="detail-label">ECTS:</span>
+                <span class="detail-value">3</span>
+              </div>
+              <div class="detail-row">
+                <span class="detail-label">Semester:</span>
+                <span class="detail-value">SS 2026</span>
+              </div>
+              <div class="detail-row">
+                <span class="detail-label">Lehrende/r:</span>
+                <span class="detail-value">Univ.-Prof. Dr. Schmidt</span>
+              </div>
+              <div class="detail-row">
+                <span class="detail-label">Studienrichtung:</span>
+                <span class="detail-value">Informatik (Bachelor)</span>
+              </div>
+            </div>
+          </div>
+
+          <div class="detail-section">
+            <h4>Beschreibung</h4>
+            <div class="detail-content">
+              <p>Diese Vorlesung vermittelt die Grundlagen von Datenbanksystemen. Themen umfassen:</p>
+              <ul>
+                <li>Relationales Datenmodell</li>
+                <li>SQL - Structured Query Language</li>
+                <li>Datenbankentwurf und Normalisierung</li>
+                <li>Transaktionsmanagement</li>
+                <li>Indexstrukturen</li>
+                <li>Einführung in NoSQL-Datenbanken</li>
+              </ul>
+            </div>
+          </div>
+
+          <div class="detail-section">
+            <h4>Termine</h4>
+            <div class="detail-content">
+              <table class="term-table">
+                <thead>
+                  <tr>
+                    <th>Datum</th>
+                    <th>Uhrzeit</th>
+                    <th>Ort</th>
+                    <th>Thema</th>
+                  </tr>
+                </thead>
+                <tbody>
+                  <tr>
+                    <td>03.03.2026</td>
+                    <td>10:00 - 11:30</td>
+                    <td>HS 2</td>
+                    <td>Einführung, Relationales Modell</td>
+                  </tr>
+                  <tr>
+                    <td>10.03.2026</td>
+                    <td>10:00 - 11:30</td>
+                    <td>HS 2</td>
+                    <td>SQL Grundlagen</td>
+                  </tr>
+                  <tr>
+                    <td>17.03.2026</td>
+                    <td>10:00 - 11:30</td>
+                    <td>HS 2</td>
+                    <td>SQL Fortgeschritten</td>
+                  </tr>
+                  <tr>
+                    <td>24.03.2026</td>
+                    <td>10:00 - 11:30</td>
+                    <td>HS 2</td>
+                    <td>Normalisierung</td>
+                  </tr>
+                  <tr>
+                    <td>31.03.2026</td>
+                    <td>10:00 - 11:30</td>
+                    <td>HS 2</td>
+                    <td>Transaktionen</td>
+                  </tr>
+                </tbody>
+              </table>
+            </div>
+          </div>
+
+          <div class="detail-section">
+            <h4>Anmeldung</h4>
+            <div class="detail-content">
+              <div class="detail-row">
+                <span class="detail-label">Status:</span>
+                <span class="detail-value">Anmeldung offen</span>
+              </div>
+              <div class="detail-row">
+                <span class="detail-label">Anmeldezeitraum:</span>
+                <span class="detail-value">15.02.2026 - 28.02.2026</span>
+              </div>
+              <div class="detail-row">
+                <span class="detail-label">Plätze:</span>
+                <span class="detail-value">45 / 60</span>
+              </div>
+              <div style="margin-top: 15px;">
+                <a href="/pages/registration.html" class="buttonstyle" style="text-decoration: none; padding: 5px 15px;">Zur LVA anmelden</a>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+
+      <div class="context-column contextmenu">
+        <h5>Aktionen</h5>
+        <ul class="contextmenulist">
+          <li><a href="/pages/registration.html">Anmelden</a></li>
+          <li><a href="/pages/schedule.html">Im Stundenplan</a></li>
+        </ul>
+
+        <h5>Zugehörige LVAs</h5>
+        <ul class="contextmenulist">
+          <li><a href="#">352.002 DB Übung</a></li>
+        </ul>
+      </div>
+    </div>
+  </div>
+
+  <div class="footer-bar">
+    <p>KUSSS - Kepler University Study Support System | Lokale Entwicklungsversion</p>
+  </div>
+
+  <script src="/common/kusss/scripts/change.js"></script>
+  <script src="/common/kusss/scripts/popup.js"></script>
+  <script src="/common/kusss/scripts/checkall.js"></script>
+</body>
+</html>

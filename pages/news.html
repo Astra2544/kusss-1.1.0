@@ -1,0 +1,144 @@
+<!DOCTYPE html>
+<html lang="de">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>KUSSS - Aktuelles</title>
+  <link rel="stylesheet" href="/common/kusss/styles/kusss.css">
+  <link rel="stylesheet" href="/common/kusss/styles/5browser.css">
+  <link rel="stylesheet" href="/common/kusss/styles/menu.css">
+  <link rel="stylesheet" href="/common/kusss/styles/kusss_interim.css">
+  <link rel="stylesheet" href="/common/kusss/styles/tabbedPanel.css">
+  <style>
+    .main-layout { display: table; width: 100%; border-collapse: collapse; }
+    .main-row { display: table-row; }
+    .menu-column { display: table-cell; width: 180px; vertical-align: top; padding: 10px; }
+    .content-column { display: table-cell; vertical-align: top; padding: 15px; border-left: 1px solid #E6E9EE; }
+    .context-column { display: table-cell; width: 180px; vertical-align: top; padding: 10px; border-left: 1px solid #E6E9EE; }
+    .header-bar { background: #D3D6DB; padding: 10px 15px; border-bottom: 3px solid #D03B6F; }
+    .header-logo { display: flex; align-items: center; justify-content: space-between; }
+    .header-logo h1 { color: #333298; margin: 0; font-size: 1.5em; }
+    .footer-bar { background: #E6E9EE; padding: 10px 15px; text-align: center; font-size: 10px; color: #666; border-top: 1px solid #D3D6DB; }
+    .news-article { background: #F5F7F7; padding: 15px; margin-bottom: 15px; border: 1px solid #E6E9EE; border-left: 4px solid #D03B6F; }
+    .news-article h4 { color: #333298; margin-top: 0; }
+    .news-date { font-size: 10px; color: #666; margin-bottom: 10px; }
+    .news-tag { display: inline-block; padding: 2px 8px; font-size: 10px; background: #333298; color: white; border-radius: 3px; margin-right: 5px; }
+  </style>
+</head>
+<body>
+  <div class="header-bar">
+    <div class="header-logo">
+      <div style="display: flex; align-items: center; gap: 15px;">
+        <a href="/index.html"><img src="/common/kusss/pics/logos/system_kusss.png" alt="KUSSS Logo" height="40"></a>
+        <h1>KUSSS</h1>
+      </div>
+      <div style="font-size: 11px;">
+        <a href="/index.html" class="buttonstyle" style="text-decoration: none; padding: 3px 10px;">Login</a>
+      </div>
+    </div>
+  </div>
+
+  <div class="main-layout">
+    <div class="main-row">
+      <div class="menu-column menu">
+        <ul class="menu-group">
+          <li class="menu-group"><span class="menu-group">Information</span>
+            <ul class="menu-item">
+              <li class="menu-item menu-item-active"><a href="/pages/news.html">Aktuelles</a></li>
+              <li class="menu-item"><a href="/pages/help.html">Hilfe</a></li>
+              <li class="menu-item"><a href="/pages/contact.html">Kontakt</a></li>
+            </ul>
+          </li>
+        </ul>
+        <ul class="menu-group">
+          <li class="menu-group"><span class="menu-group">Studium</span>
+            <ul class="menu-item">
+              <li class="menu-item"><a href="/pages/courses.html">LVA-Suche</a></li>
+              <li class="menu-item"><a href="/pages/schedule.html">Stundenplan</a></li>
+              <li class="menu-item"><a href="/pages/exams.html">Prüfungen</a></li>
+            </ul>
+          </li>
+        </ul>
+      </div>
+
+      <div class="content-column">
+        <div class="contentcell">
+          <p class="path" style="text-align: right; margin-bottom: 10px;">
+            <a href="/index.html">Start</a> &gt; <span class="here">Aktuelles</span>
+          </p>
+
+          <h3>Aktuelles</h3>
+
+          <div class="news-article">
+            <span class="news-tag">Wichtig</span>
+            <span class="news-tag">SS 2026</span>
+            <h4>Semesterbeginn Sommersemester 2026</h4>
+            <div class="news-date">31. Januar 2026</div>
+            <p>Das Sommersemester 2026 beginnt am 1. März 2026. Die Anmeldung zu Lehrveranstaltungen ist ab dem 15. Februar möglich.</p>
+            <p>Bitte beachten Sie die Anmeldefristen für Ihre Lehrveranstaltungen und Prüfungen.</p>
+          </div>
+
+          <div class="news-article">
+            <span class="news-tag">System</span>
+            <h4>Wartungsarbeiten am Wochenende</h4>
+            <div class="news-date">25. Januar 2026</div>
+            <p>Am kommenden Wochenende (01.-02. Februar) finden planmäßige Wartungsarbeiten am KUSSS-System statt. Das System kann in dieser Zeit vorübergehend nicht erreichbar sein.</p>
+            <p>Wir bitten um Ihr Verständnis.</p>
+          </div>
+
+          <div class="news-article">
+            <span class="news-tag">Neu</span>
+            <h4>Neue Funktionen im Stundenplan</h4>
+            <div class="news-date">20. Januar 2026</div>
+            <p>Der Stundenplan wurde überarbeitet und bietet nun folgende Verbesserungen:</p>
+            <ul>
+              <li>Verbesserte Wochenansicht</li>
+              <li>Export als iCal</li>
+              <li>Farbcodierung nach LVA-Typ</li>
+            </ul>
+          </div>
+
+          <div class="news-article">
+            <span class="news-tag">Prüfungen</span>
+            <h4>Prüfungsanmeldung WS 2025</h4>
+            <div class="news-date">10. Januar 2026</div>
+            <p>Die Anmeldung zu Prüfungen für das Wintersemester 2025 ist noch bis zum 31. Januar möglich. Bitte überprüfen Sie Ihre Anmeldungen rechtzeitig.</p>
+          </div>
+
+          <div class="news-article">
+            <span class="news-tag">Info</span>
+            <h4>Sprechstunden im Februar</h4>
+            <div class="news-date">05. Januar 2026</div>
+            <p>Die Sprechstunden der Studienservices sind im Februar wie folgt geändert: Mo-Do 9:00-12:00 und 13:00-15:00 Uhr. Freitags geschlossen.</p>
+          </div>
+        </div>
+      </div>
+
+      <div class="context-column contextmenu">
+        <h5>Filter</h5>
+        <ul class="contextmenulist">
+          <li><a href="#">Alle Nachrichten</a></li>
+          <li><a href="#">Wichtig</a></li>
+          <li><a href="#">System</a></li>
+          <li><a href="#">Prüfungen</a></li>
+        </ul>
+
+        <h5>Archiv</h5>
+        <ul class="contextmenulist">
+          <li><a href="#">Januar 2026</a></li>
+          <li><a href="#">Dezember 2025</a></li>
+          <li><a href="#">November 2025</a></li>
+        </ul>
+      </div>
+    </div>
+  </div>
+
+  <div class="footer-bar">
+    <p>KUSSS - Kepler University Study Support System | Lokale Entwicklungsversion</p>
+  </div>
+
+  <script src="/common/kusss/scripts/change.js"></script>
+  <script src="/common/kusss/scripts/popup.js"></script>
+  <script src="/common/kusss/scripts/checkall.js"></script>
+</body>
+</html>

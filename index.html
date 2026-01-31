@@ -1,562 +1,246 @@
-
-
-
-
-
-
-<html xmlns="http://www.w3.org/1999/xhtml" lang="de" xml:lang="de">
- <head>
-	  <meta http-equiv="Content-Type" content="text/html; charset=iso-8859-1" />
-  	  <meta http-equiv="Content-Style-Type" content="text/css" />
-	  <meta name="description" content="KUSSS, Kepler University Study Support System" />
-	  <meta name="keywords" content="KUSSS, Kepler University Study Support System" />
-	  <meta name="author" content="ITC, Johannes Kepler Universit�t Linz" />
-	  <meta name="robots" content="index, follow" />
-	  <meta http-equiv="pragma" content="no-cache" />
-	  <meta http-equiv="cache-control" content="no-cache" />
-	  <meta http-equiv="expires" content="0" />
-
-	  <link href="common/kusss/styles/kusss.css" rel="stylesheet" type="text/css" media="screen" />
-	  <link href="common/kusss/styles/5browser.css" rel="stylesheet" type="text/css" media="screen,print" />
-	  <link href="common/kusss/styles/login.css" rel="stylesheet" type="text/css" media="screen" />
-	  <link href="common/kusss/styles/menu.css" rel="stylesheet" type="text/css" media="screen" />
-	  <link href="common/kusss/styles/tabbedPanel.css" rel="stylesheet" type="text/css" media="screen" />
-	  <link href="common/kusss/styles/kusss_interim.css" rel="stylesheet" type="text/css" media="screen" />
-	<link rel="shortcut icon" href="https://www.kusss.jku.at/common/kusss/pics/logos/favicon.ico">
-	
-	  <script src="common/kusss/scripts/change.js" type="text/javascript"></script>
-	  <script src="common/kusss/scripts/checkall.js" type="text/javascript"></script>
-	  <script src="common/kusss/scripts/popup.js" type="text/javascript"></script>
-	  <script src="common/kusss/scripts/rulemgmt.js" type="text/javascript"></script>
-	  <script src="common/kusss/scripts/clipboard.min.js" type="text/javascript"></script>
-	  <title>
-		  KUSSS | Willkommen
-		  
-	  </title>
-	  
-	  
-	  
-  </head>
-  <body 
-  		
-  		>
-  		
-		
-
-<table border="0" cellspacing="0" cellpadding="0" style="width:100%; height: 100%">
-<colgroup>
-	<col width="150" />
-	<col width="100%" />
-</colgroup>
-
-	<tr id="header_kusss">
-		<td class="noprint" colspan="2">
-			
-
-    <!-- BO header -->
-
-
-
-<div id="header">
-
-  <!-- BO logo -->
-	  <a href="https://www.kusss.jku.at/kusss/" id="subsite_logo"
-	  ><img src="common/kusss/pics/logos/system_kusss.png" alt="KUSSS Kepler University Study Support System" border="0" 
-	  /></a>
-  	  <span id="subsite_name">Kepler University Study Support System</span>
-  <!-- EO logo -->
-
-  <hr class="display_none" />
-
-  <div id="topnav">
-    <!-- BO skip link navigation -->
-    <span class="hideme">Seitenbereiche:</span>
-    <ul class="skip">
-      <li><a href="index.html#content" accesskey="0">Zum Inhalt (Alt+0)</a><span class="hideme">.</span></li>
-      <li><a href="index.html#submenu" accesskey="2">Zum Men&uuml; (Alt+2)</a><span class="hideme">.</span></li>
-      <li><a href="index.html#breadcrumbs" accesskey="3">Zur Positionsanzeige (Alt+3)</a><span class="hideme">.</span></li>
-      <li><a href="index.html#quicklinks" accesskey="5">Zu den Quick Links (Alt+5)</a><span class="hideme">.</span></li>
-      <li><a href="index.html#contextmenu" accesskey="6">Zum Kontextmen&uuml; (Alt+6)</a><span class="hideme">.</span></li>
-      <li><a href="index.html#options" accesskey="7">Zur Sprachauswahl (Alt+7)</a><span class="hideme">.</span></li>
-      <li><a href="index.html#term" accesskey="8">Zur Semesterauswahl (Alt+8)</a><span class="hideme">.</span></li>
-      <li><a href="index.html#login_out" accesskey="9">Zum KUSSS-Login (Alt+9)</a><span class="hideme">.</span></li>
-    </ul>
-    <!-- EO skip link navigation -->
-
-    <hr class="display_none" />
-
-    <!-- BO options -->
-    <a name="options" class="hideme">Sprachauswahl:</a> <!-- skiplink anchor: options -->
-    <div class="options">
-
-      <!-- BO language -->
-		
-
-<label for="language" class="hideme">Sprache:</label>
-<ul id="language">
-	
-	  	<li>
-	 		<span class="hideme">[</span><abbr title="deutsch">DE</abbr><span class="hideme">]</span>
-	  		<span class="hideme">.</span>
-	  	</li>
-	  	<li>
-	          <a href="https://www.kusss.jku.at/kusss/set-locale.action?lang=en&amp;reloadAction=index.action" onclick="return hasChanged()"
-	           	tabindex="5"
-	           ><abbr title="english">EN</abbr>
-	  		</a>
-	  		<span class="hideme">.</span>
-	  	</li>
-	
-	
-</ul>
-
-      <!-- EO language -->
-
+<!DOCTYPE html>
+<html lang="de">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>KUSSS - Kepler University Study Support System</title>
+  <link rel="stylesheet" href="/common/kusss/styles/kusss.css">
+  <link rel="stylesheet" href="/common/kusss/styles/5browser.css">
+  <link rel="stylesheet" href="/common/kusss/styles/menu.css">
+  <link rel="stylesheet" href="/common/kusss/styles/kusss_interim.css">
+  <link rel="stylesheet" href="/common/kusss/styles/tabbedPanel.css">
+  <style>
+    .main-layout {
+      display: table;
+      width: 100%;
+      border-collapse: collapse;
+    }
+    .main-row {
+      display: table-row;
+    }
+    .menu-column {
+      display: table-cell;
+      width: 180px;
+      vertical-align: top;
+      padding: 10px;
+    }
+    .content-column {
+      display: table-cell;
+      vertical-align: top;
+      padding: 15px;
+      border-left: 1px solid #E6E9EE;
+    }
+    .context-column {
+      display: table-cell;
+      width: 180px;
+      vertical-align: top;
+      padding: 10px;
+      border-left: 1px solid #E6E9EE;
+    }
+    .header-bar {
+      background: #D3D6DB;
+      padding: 10px 15px;
+      border-bottom: 3px solid #D03B6F;
+    }
+    .header-logo {
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+    }
+    .header-logo h1 {
+      color: #333298;
+      margin: 0;
+      font-size: 1.5em;
+    }
+    .login-form {
+      display: flex;
+      align-items: center;
+      gap: 10px;
+    }
+    .welcome-section {
+      background: #F5F7F7;
+      padding: 20px;
+      margin-bottom: 20px;
+      border: 1px solid #E6E9EE;
+    }
+    .quick-links {
+      display: grid;
+      grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+      gap: 15px;
+      margin-top: 20px;
+    }
+    .quick-link-card {
+      background: #fff;
+      border: 1px solid #D3D6DB;
+      padding: 15px;
+      text-decoration: none;
+      color: inherit;
+      transition: all 0.2s;
+    }
+    .quick-link-card:hover {
+      border-color: #D03B6F;
+      background: #F5F7F7;
+    }
+    .quick-link-card h4 {
+      color: #333298;
+      margin: 0 0 8px 0;
+    }
+    .quick-link-card p {
+      margin: 0;
+      font-size: 11px;
+      color: #666;
+    }
+    .footer-bar {
+      background: #E6E9EE;
+      padding: 10px 15px;
+      text-align: center;
+      font-size: 10px;
+      color: #666;
+      border-top: 1px solid #D3D6DB;
+    }
+    .news-item {
+      padding: 10px;
+      border-bottom: 1px dotted #D3D6DB;
+    }
+    .news-item:last-child {
+      border-bottom: none;
+    }
+    .news-date {
+      font-size: 10px;
+      color: #666;
+    }
+  </style>
+</head>
+<body>
+  <div class="header-bar">
+    <div class="header-logo">
+      <div style="display: flex; align-items: center; gap: 15px;">
+        <img src="/common/kusss/pics/logos/system_kusss.png" alt="KUSSS Logo" height="40">
+        <h1>KUSSS</h1>
+        <span style="color: #666; font-size: 11px;">Kepler University Study Support System</span>
+      </div>
+      <div class="login-form">
+        <label>Matrikelnr.:</label>
+        <input type="text" class="inputfields" style="width: 80px;" id="matrikel">
+        <label>Kennwort:</label>
+        <input type="password" class="inputfields" style="width: 80px;" id="password">
+        <button class="buttonstyle" onclick="window.location.href='/pages/dashboard.html'">Login</button>
+      </div>
     </div>
-    <!-- EO options -->
   </div>
 
-</div>
-<!-- EO header -->
+  <div class="main-layout">
+    <div class="main-row">
+      <div class="menu-column menu">
+        <ul class="menu-group">
+          <li class="menu-group"><span class="menu-group">Information</span>
+            <ul class="menu-item">
+              <li class="menu-item"><a href="/pages/news.html">Aktuelles</a></li>
+              <li class="menu-item"><a href="/pages/help.html">Hilfe</a></li>
+              <li class="menu-item"><a href="/pages/contact.html">Kontakt</a></li>
+            </ul>
+          </li>
+        </ul>
+        <ul class="menu-group">
+          <li class="menu-group"><span class="menu-group">Studium</span>
+            <ul class="menu-item">
+              <li class="menu-item"><a href="/pages/courses.html">LVA-Suche</a></li>
+              <li class="menu-item"><a href="/pages/schedule.html">Stundenplan</a></li>
+              <li class="menu-item"><a href="/pages/exams.html">Prüfungen</a></li>
+            </ul>
+          </li>
+        </ul>
+        <ul class="menu-group">
+          <li class="menu-group"><span class="menu-group">Service</span>
+            <ul class="menu-item">
+              <li class="menu-item"><a href="/pages/registration.html">Anmeldung</a></li>
+              <li class="menu-item"><a href="/pages/grades.html">Noten</a></li>
+              <li class="menu-item"><a href="/pages/certificates.html">Bescheinigungen</a></li>
+            </ul>
+          </li>
+        </ul>
+      </div>
 
-    <hr class="display_none" />
+      <div class="content-column">
+        <div class="contentcell">
+          <h3>Willkommen bei KUSSS</h3>
 
-    <div id="nav">
-      <!-- BO functions -->
-<ul id="functions">
+          <div class="welcome-section">
+            <p>Das <strong>Kepler University Study Support System (KUSSS)</strong> ist das zentrale Informations- und Verwaltungssystem für Studierende der Johannes Kepler Universität Linz.</p>
+            <p>Bitte melden Sie sich mit Ihrer Matrikelnummer und Ihrem Kennwort an, um alle Funktionen nutzen zu können.</p>
+          </div>
 
-  <!-- BO login_out -->
-	
+          <h4>Schnellzugriff</h4>
+          <div class="quick-links">
+            <a href="/pages/courses.html" class="quick-link-card">
+              <h4>LVA-Suche</h4>
+              <p>Durchsuchen Sie das Lehrveranstaltungsangebot</p>
+            </a>
+            <a href="/pages/schedule.html" class="quick-link-card">
+              <h4>Stundenplan</h4>
+              <p>Ihre persönlichen Termine und Vorlesungen</p>
+            </a>
+            <a href="/pages/exams.html" class="quick-link-card">
+              <h4>Prüfungen</h4>
+              <p>Prüfungstermine und Anmeldungen</p>
+            </a>
+            <a href="/pages/grades.html" class="quick-link-card">
+              <h4>Notenspiegel</h4>
+              <p>Ihre bisherigen Prüfungsergebnisse</p>
+            </a>
+          </div>
 
-  <li id="login_out">
-	<a name="login_out" class="hideme">KUSSS-Login</a>
-	
+          <h4 style="margin-top: 25px;">Aktuelle Hinweise</h4>
+          <div class="border">
+            <div class="news-item">
+              <span class="news-date">31.01.2026</span>
+              <p><strong>Semesterbeginn SS 2026</strong><br>
+              Die Anmeldung zu Lehrveranstaltungen für das Sommersemester 2026 beginnt am 15. Februar.</p>
+            </div>
+            <div class="news-item">
+              <span class="news-date">25.01.2026</span>
+              <p><strong>Wartungsarbeiten</strong><br>
+              Am Wochenende finden Wartungsarbeiten statt. Das System kann vorübergehend nicht erreichbar sein.</p>
+            </div>
+            <div class="news-item">
+              <span class="news-date">20.01.2026</span>
+              <p><strong>Neue Funktionen</strong><br>
+              Der Stundenplan wurde überarbeitet und bietet nun eine verbesserte Übersicht.</p>
+            </div>
+          </div>
+        </div>
+      </div>
 
-		<form class="nomargin" name="loginform" action="https://www.kusss.jku.at/kusss/login.action" method="get">            		
-			
-		    <input type="hidden" name="log" value="1"/> 
-		    
-	    	
-			<input type="submit" class="submit" value="Login"/>
+      <div class="context-column contextmenu">
+        <h5>Quicklinks</h5>
+        <ul class="contextmenulist">
+          <li><a href="/pages/dashboard.html">Mein KUSSS</a></li>
+          <li><a href="/pages/courses.html">LVA-Angebot</a></li>
+          <li><a href="/pages/schedule.html">Stundenplan</a></li>
+          <li><a href="/pages/grades.html">Notenspiegel</a></li>
+        </ul>
 
-			
-			
-				<a target="_blank" href="https://help.jku.at/im/de/it-systeme/jku-single-sign-on-shibboleth">Hilfe</a>
-			
-		</form>
-	
-	
-	
-	
+        <h5>Termine</h5>
+        <ul class="contextmenulist">
+          <li><a href="/pages/exams.html">Prüfungen</a></li>
+          <li><a href="/pages/registration.html">Anmeldung</a></li>
+        </ul>
 
-    <span class="hideme">.</span>
-    <hr class="display_none" />
-    
-  </li>
-
-  <!-- EO login_out -->
-
-</ul>
-
-<!-- EO functions -->
-		</td>
-	</tr>
-
-	<tr>
-		<td valign="top" height="100%" width="150" class="menu noprint">        
-			<div class="columncell">
-				
-
-
-<a name="submenu" class="hideme">Men&uuml;</a>
-
-
-
-
-<ul class="menu-group">
-
-	
-	  	<li class="menu-group">
-		       <span class="menu-group"
-		       		
-		       	 >Aktuelles
-		       </span>
-		    <ul class="menu-item">
-		    
-		           
-		               <li class="menu-item ">
-		                   <a tabindex="20"
-		                      href="https://www.kusss.jku.at/kusss/read-global-messageboard.action"      
-		                      	 
-		                         
-		                      ><span class="menu-item">News</span>
-		                   </a>
-		               </li>
-		          
-		    
-		           
-		    
-		           
-		    
-		    </ul>
-        </li>
-	
-
-	
-	  	<li class="menu-group">
-		       <span class="menu-group"
-		       		
-		       	 >G�stezimmer
-		       </span>
-		    <ul class="menu-item">
-		    
-		           
-		               <li class="menu-item ">
-		                   <a tabindex="21"
-		                      href="https://www.kusss.jku.at/kusss/coursecatalogue-start.action?showFilters=false"      
-		                      	 
-		                         
-		                      ><span class="menu-item">LVA-Suche</span>
-		                   </a>
-		               </li>
-		          
-		    
-		           
-		               <li class="menu-item ">
-		                   <a tabindex="22"
-		                      href="https://www.kusss.jku.at/kusss/subjectProclamation.action"      
-		                      	 
-		                         
-		                      ><span class="menu-item">Kundmachung</span>
-		                   </a>
-		               </li>
-		          
-		    
-		    </ul>
-        </li>
-	
-
-	
-
-	
-
-	
-
-	
-
-	
-
-	
-
-	
-
-	
-
-	
-
-	
-
-	
-
-	
-
-	
-
-	
-	  	<li class="menu-group">
-		       <span class="menu-group"
-		       		
-		       	 >Externe Tools
-		       </span>
-		    <ul class="menu-item">
-		    
-		           
-		    
-		           
-		    
-		           
-		               <li class="menu-item ">
-		                   <a tabindex="23"
-		                      href="https://studienhandbuch.jku.at/?lang=de"      
-		                      	 target="_blank"
-		                         title="Detailinformationen zu den Curricula der JKU"
-		                      ><span class="menu-item">Studienhandbuch</span>
-		                   </a>
-		               </li>
-		          
-		    
-		           
-		    
-		           
-		    
-		           
-		    
-		    </ul>
-        </li>
-	
-
-	
-	  	<li class="menu-group">
-		       <span class="menu-group"
-		       		
-		       	 >Hilfe
-		       </span>
-		    <ul class="menu-item">
-		    
-		           
-		               <li class="menu-item ">
-		                   <a tabindex="24"
-		                      href="https://help.jku.at/im/de/it-systeme/jku-single-sign-on-shibboleth"      
-		                      	 target="_blank"
-		                         
-		                      ><span class="menu-item">Login</span>
-		                   </a>
-		               </li>
-		          
-		    
-		           
-		    
-		           
-		               <li class="menu-item ">
-		                   <a tabindex="25"
-		                      href="https://www.jku.at/index.php?id=4991"      
-		                      	 target="_blank"
-		                         
-		                      ><span class="menu-item">FAQs</span>
-		                   </a>
-		               </li>
-		          
-		    
-		           
-		               <li class="menu-item ">
-		                   <a tabindex="26"
-		                      href="https://www.jku.at/?id=6717#c146234"      
-		                      	 target="_blank"
-		                         
-		                      ><span class="menu-item">Video-Tutorials</span>
-		                   </a>
-		               </li>
-		          
-		    
-		           
-		    
-		           
-		    
-		           
-		    
-		           
-		               <li class="menu-item ">
-		                   <a tabindex="27"
-		                      href="https://www.jku.at/index.php?id=10269"      
-		                      	 target="_blank"
-		                         
-		                      ><span class="menu-item">Infobl�tter</span>
-		                   </a>
-		               </li>
-		          
-		    
-		           
-		               <li class="menu-item ">
-		                   <a tabindex="28"
-		                      href="https://www.jku.at/index.php?id=22"      
-		                      	 target="_blank"
-		                         
-		                      ><span class="menu-item">Studium auf einen Blick</span>
-		                   </a>
-		               </li>
-		          
-		    
-		           
-		               <li class="menu-item ">
-		                   <a tabindex="29"
-		                      href="https://www.jku.at/index.php?id=4968"      
-		                      	 target="_blank"
-		                         
-		                      ><span class="menu-item">Kontakt</span>
-		                   </a>
-		               </li>
-		          
-		    
-		           
-		    
-		           
-		    
-		    </ul>
-        </li>
-	
-
-</ul>
-
-
-			</div>
-		</td>
-		<td width="100%" height="100%" valign="top">
-			<table border="0" cellspacing="0" cellpadding="0" style="width:100%; height: 100%">
-				<tr class="noprint" valign="middle">
-					<td class="menu" height="27">             
-						
-
-					</td>
-					
-					<td align="right" height="27" class="menu">
-						<div class="columncell">
-							
-
-
-
-						</div>
-					</td>
-				</tr>
-				<tr>  
-					<td colspan="2" valign="top" class="contentcell">
-						
-
-<div class="contentcell">
-	<a name="content" class="hideme noprint">Inhalt</a>
-	
-
-<table width="100%" cellpadding="3" cellspacing="1" align="center"  border="0">	
-    <tr>
-        <td colspan="2" ><img src="common/kusss/pics/pixel.gif" alt="" width="1" height="10" border="0" /></td>
-    </tr>
-    <tr valign="top">
-        <td colspan=""><img src="common/kusss/pics/pixel.gif" alt="" width="1" height="1" border="0" /></td>
-        <td>
-			
-<table  cellspacing="0" cellpadding="3" border="0" width="100%">
-	<tr><th colspan="3" align="left">Aktuelle News</th></tr>	
-	
-	
-		<tr class="darkcell">
-			<td width="20">	 	
-		 		<strong><img src="common/kusss/pics/news_new_icon.gif" alt=""/> <a class="normallinkcyan" href="https://www.kusss.jku.at/kusss/read-global-messageboard.action">News lesen...!</a></strong>
-	        </td>
-	    </tr>
-	
-</table>									
-		</td>		
-	</tr>
-	<tr>
-        <td colspan="2"><img src="common/kusss/pics/pixel.gif" alt="" width="1" height="1" border="0" /></td>
-    </tr>
-	<tr valign="top">
-        <td><img src="common/kusss/pics/pixel.gif" alt="" width="1" height="1" border="0" /></td>
-        <td>
-            
-
-<table  cellspacing="0" cellpadding="3" border="0" width="100%">
-	<tr><th colspan="3" align="left">Studienhandbuch / KUSSS Lehrveranstaltungskatalog</th></tr>	
-
-	<tr class="darkcell">
-		<td width="20">	
-			<strong><img src="common/kusss/pics/menu-item-external.gif" width="15" height="15" alt=""/> <a target="_blank" href="https://studienhandbuch.jku.at/?lang=de">Studienhandbuch</a></strong>
-		</td>
-	</tr>
-	<tr class="lightcell">
-		<td width="20">
-			<strong><img src="common/kusss/pics/kompass.gif" width="15" height="15" alt=""/> <a href="https://www.kusss.jku.at/kusss/coursecatalogue-start.action" >KUSSS Lehrveranstaltungskatalog</a></strong>
-		</td>
-	</tr>
-</table>		
-		</td>	
-	</tr>
-	
-	<tr>
-        <td colspan="2"><img src="common/kusss/pics/pixel.gif" alt="" width="1" height="1" border="0" /></td>
-    </tr>
-		<tr valign="top">
-        <td><img src="common/kusss/pics/pixel.gif" alt="" width="1" height="1" border="0" /></td>
-        <td>
-            
-
-<table  cellspacing="0" cellpadding="3" border="0" width="100%">
-	<tr><th colspan="3" align="left">Hilfe</th></tr>	
-	<tr class="darkcell">
-		<td width="20">
-			<strong><img src="common/kusss/pics/infoblue.gif" height="15" width="15" alt=""> <a target="_blank" href="https://help.jku.at/im/de/it-systeme/jku-single-sign-on-shibboleth">Login Hilfe</a></strong>
-		</td>
-	</tr>
-	
-		<tr class="lightcell">
-			<td width="20">
-				<strong><img src="common/kusss/pics/infoblue.gif" height="15" width="15" alt=""> <a target="_blank" href="https://www.jku.at/index.php?id=4991">FAQs</a></strong>
-			</td>
-		</tr>
-	
-	
-	<tr class="darkcell">
-		<td width="20">
-			<strong><img src="common/kusss/pics/infoblue.gif" height="15" width="15" alt=""> <a target="_blank" href="https://www.jku.at/?id=6717#c146234">Video-Tutorials</a></strong>
-		</td>
-	</tr>
-	<tr class="lightcell">
-		<td width="20">
-			
-			
-				<strong><img src="common/kusss/pics/infoblue.gif" height="15" width="15" alt=""> <a target="_blank" href="https://www.jku.at/index.php?id=10269">Informationsbl�tter</a></strong>
-			
-		</td>
-	</tr>
-	<tr class="darkcell">
-		<td width="20">
-		
-			<strong><img src="common/kusss/pics/infoblue.gif" height="15" width="15" alt=""> <a target="_blank" href="https://www.jku.at/index.php?id=4968">Kontakt</a></strong>
-		
-		
-		</td>
-	</tr>
-</table>
-		
-		</td>	
-	</tr>
-</table>
-
-                                           
-</div>
-
-					</td>                                                                
-										
-				</tr>
-				<tr class="noprint">
-					<td colspan="2" height="25" style="border-right: 1px solid #E6E9EE">
-						
-
-<div class="contentfootercell">
-            
-           <abbr title="Di. 27.01.2026">KUSSS2 Version 1.1.411</abbr>
-</div>
-
-					</td>
-				</tr>
-			</table>
-		</td>
-	</tr>
-	<tr id="footer_kusss">
-		<td colspan="2">
-			
-
-<!-- BO footer -->
-<div id="footer" class="noprint">
-
-  <hr class="display_none" />
-
-  <!-- BO siteinfo -->
-  <div id="siteinfo">
-    <p>Johannes Kepler Universit�t Linz <em>KUSSS</em>, Altenberger Str. 69, A-4040 Linz, Austria, DVR: 0093696, Tel. +43 732 2468 2030</p>
-    <ul>
-      <li><a href="https://www.jku.at/datenschutz/studierende" target="_blank" title="Datenschutzerkl�rung">Datenschutzerkl�rung</a></li>
-      <li><a href="https://www.kusss.jku.at/kusss/impressum.action" title="Informationen zur Entwicklung von KUSSS">Impressum</a></li>
-    </ul>
+        <h5>Hilfe</h5>
+        <ul class="contextmenulist">
+          <li><a href="/pages/help.html">FAQ</a></li>
+          <li><a href="/pages/contact.html">Support</a></li>
+        </ul>
+      </div>
+    </div>
   </div>
-  <!-- EO siteinfo -->
 
-</div>
-<!-- EO footer -->
+  <div class="footer-bar">
+    <p>KUSSS - Kepler University Study Support System | Johannes Kepler Universität Linz | Lokale Entwicklungsversion</p>
+  </div>
 
-		</td>
-	</tr>
-</table>
-
- 		
-  </body>
+  <script src="/common/kusss/scripts/change.js"></script>
+  <script src="/common/kusss/scripts/popup.js"></script>
+  <script src="/common/kusss/scripts/checkall.js"></script>
+</body>
 </html>

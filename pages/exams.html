@@ -1,0 +1,213 @@
+<!DOCTYPE html>
+<html lang="de">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>KUSSS - Prüfungen</title>
+  <link rel="stylesheet" href="/common/kusss/styles/kusss.css">
+  <link rel="stylesheet" href="/common/kusss/styles/5browser.css">
+  <link rel="stylesheet" href="/common/kusss/styles/menu.css">
+  <link rel="stylesheet" href="/common/kusss/styles/kusss_interim.css">
+  <link rel="stylesheet" href="/common/kusss/styles/tabbedPanel.css">
+  <style>
+    .main-layout { display: table; width: 100%; border-collapse: collapse; }
+    .main-row { display: table-row; }
+    .menu-column { display: table-cell; width: 180px; vertical-align: top; padding: 10px; }
+    .content-column { display: table-cell; vertical-align: top; padding: 15px; border-left: 1px solid #E6E9EE; }
+    .context-column { display: table-cell; width: 180px; vertical-align: top; padding: 10px; border-left: 1px solid #E6E9EE; }
+    .header-bar { background: #D3D6DB; padding: 10px 15px; border-bottom: 3px solid #D03B6F; }
+    .header-logo { display: flex; align-items: center; justify-content: space-between; }
+    .header-logo h1 { color: #333298; margin: 0; font-size: 1.5em; }
+    .user-info { display: flex; align-items: center; gap: 15px; font-size: 11px; }
+    .footer-bar { background: #E6E9EE; padding: 10px 15px; text-align: center; font-size: 10px; color: #666; border-top: 1px solid #D3D6DB; }
+    .exam-table { width: 100%; border-collapse: collapse; }
+    .exam-table th, .exam-table td { padding: 8px; text-align: left; }
+    .exam-table tr:nth-child(even) { background: #F5F7F7; }
+    .exam-table tr:nth-child(odd) { background: #E1E1E1; }
+    .status-angemeldet { color: #157A10; font-weight: bold; }
+    .status-offen { color: #333298; }
+    .exam-section { margin-bottom: 30px; }
+    .exam-section h4 { background: #B24372; color: white; padding: 8px 15px; margin-bottom: 0; }
+  </style>
+</head>
+<body>
+  <div class="header-bar">
+    <div class="header-logo">
+      <div style="display: flex; align-items: center; gap: 15px;">
+        <a href="/index.html"><img src="/common/kusss/pics/logos/system_kusss.png" alt="KUSSS Logo" height="40"></a>
+        <h1>KUSSS</h1>
+      </div>
+      <div class="user-info">
+        <span class="loggedin">Angemeldet als: <strong>Max Mustermann</strong></span>
+        <a href="/index.html" class="buttonstyle" style="text-decoration: none; padding: 3px 10px;">Logout</a>
+      </div>
+    </div>
+  </div>
+
+  <div class="main-layout">
+    <div class="main-row">
+      <div class="menu-column menu">
+        <ul class="menu-group">
+          <li class="menu-group"><span class="menu-group">Mein Studium</span>
+            <ul class="menu-item">
+              <li class="menu-item"><a href="/pages/dashboard.html">Dashboard</a></li>
+              <li class="menu-item"><a href="/pages/courses.html">Meine LVAs</a></li>
+              <li class="menu-item"><a href="/pages/schedule.html">Stundenplan</a></li>
+              <li class="menu-item"><a href="/pages/grades.html">Notenspiegel</a></li>
+            </ul>
+          </li>
+        </ul>
+        <ul class="menu-group">
+          <li class="menu-group"><span class="menu-group">Anmeldung</span>
+            <ul class="menu-item">
+              <li class="menu-item"><a href="/pages/registration.html">LVA-Anmeldung</a></li>
+              <li class="menu-item menu-item-active"><a href="/pages/exams.html">Prüfungsanmeldung</a></li>
+            </ul>
+          </li>
+        </ul>
+        <ul class="menu-group">
+          <li class="menu-group"><span class="menu-group">Service</span>
+            <ul class="menu-item">
+              <li class="menu-item"><a href="/pages/certificates.html">Bescheinigungen</a></li>
+              <li class="menu-item"><a href="/pages/profile.html">Profil</a></li>
+            </ul>
+          </li>
+        </ul>
+      </div>
+
+      <div class="content-column">
+        <div class="contentcell">
+          <p class="path" style="text-align: right; margin-bottom: 10px;">
+            <a href="/index.html">Start</a> &gt; <a href="/pages/dashboard.html">Dashboard</a> &gt; <span class="here">Prüfungen</span>
+          </p>
+
+          <h3>Prüfungsanmeldung</h3>
+
+          <div class="exam-section">
+            <h4>Meine angemeldeten Prüfungen</h4>
+            <table class="exam-table">
+              <thead>
+                <tr>
+                  <th>Datum</th>
+                  <th>Uhrzeit</th>
+                  <th>LVA</th>
+                  <th>Ort</th>
+                  <th>Prüfer</th>
+                  <th>Status</th>
+                  <th>Aktion</th>
+                </tr>
+              </thead>
+              <tbody>
+                <tr>
+                  <td>05.02.2026</td>
+                  <td>09:00</td>
+                  <td>Softwareentwicklung 1</td>
+                  <td>HS 2</td>
+                  <td>Prof. Bauer</td>
+                  <td class="status-angemeldet">Angemeldet</td>
+                  <td><a href="#" class="normallinkcyan">Abmelden</a></td>
+                </tr>
+                <tr>
+                  <td>12.02.2026</td>
+                  <td>14:00</td>
+                  <td>Algorithmen und Datenstrukturen</td>
+                  <td>HS 1</td>
+                  <td>Prof. Weber</td>
+                  <td class="status-angemeldet">Angemeldet</td>
+                  <td><a href="#" class="normallinkcyan">Abmelden</a></td>
+                </tr>
+                <tr>
+                  <td>19.02.2026</td>
+                  <td>10:00</td>
+                  <td>Web Engineering</td>
+                  <td>PC-Lab</td>
+                  <td>Prof. Huber</td>
+                  <td class="status-angemeldet">Angemeldet</td>
+                  <td><a href="#" class="normallinkcyan">Abmelden</a></td>
+                </tr>
+              </tbody>
+            </table>
+          </div>
+
+          <div class="exam-section">
+            <h4>Verfügbare Prüfungstermine</h4>
+            <table class="exam-table">
+              <thead>
+                <tr>
+                  <th>Datum</th>
+                  <th>Uhrzeit</th>
+                  <th>LVA</th>
+                  <th>Ort</th>
+                  <th>Prüfer</th>
+                  <th>Plätze</th>
+                  <th>Aktion</th>
+                </tr>
+              </thead>
+              <tbody>
+                <tr>
+                  <td>10.02.2026</td>
+                  <td>09:00</td>
+                  <td>Datenbanksysteme</td>
+                  <td>HS 3</td>
+                  <td>Prof. Schmidt</td>
+                  <td>45/60</td>
+                  <td><a href="#" class="normallinkblue">Anmelden</a></td>
+                </tr>
+                <tr>
+                  <td>15.02.2026</td>
+                  <td>14:00</td>
+                  <td>Mathematik 2</td>
+                  <td>HS 1</td>
+                  <td>Prof. Klein</td>
+                  <td>80/100</td>
+                  <td><a href="#" class="normallinkblue">Anmelden</a></td>
+                </tr>
+                <tr>
+                  <td>20.02.2026</td>
+                  <td>10:00</td>
+                  <td>Betriebssysteme</td>
+                  <td>HS 2</td>
+                  <td>Prof. Müller</td>
+                  <td>30/50</td>
+                  <td><a href="#" class="normallinkblue">Anmelden</a></td>
+                </tr>
+                <tr>
+                  <td>25.02.2026</td>
+                  <td>09:00</td>
+                  <td>Rechnernetze</td>
+                  <td>PC-Lab</td>
+                  <td>Prof. Fischer</td>
+                  <td>20/40</td>
+                  <td><a href="#" class="normallinkblue">Anmelden</a></td>
+                </tr>
+              </tbody>
+            </table>
+          </div>
+        </div>
+      </div>
+
+      <div class="context-column contextmenu">
+        <h5>Filter</h5>
+        <ul class="contextmenulist">
+          <li><a href="#">Alle Prüfungen</a></li>
+          <li><a href="#">Nächste 2 Wochen</a></li>
+          <li><a href="#">Dieses Semester</a></li>
+        </ul>
+
+        <h5>Hinweise</h5>
+        <div class="border" style="padding: 10px; font-size: 10px;">
+          <p class="warning_icon">Abmeldung bis 3 Tage vor dem Termin möglich!</p>
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <div class="footer-bar">
+    <p>KUSSS - Kepler University Study Support System | Lokale Entwicklungsversion</p>
+  </div>
+
+  <script src="/common/kusss/scripts/change.js"></script>
+  <script src="/common/kusss/scripts/popup.js"></script>
+  <script src="/common/kusss/scripts/checkall.js"></script>
+</body>
+</html>
