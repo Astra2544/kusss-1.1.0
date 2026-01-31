@@ -3,117 +3,36 @@
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>Mein KUSSS - Dashboard</title>
-  <link rel="stylesheet" href="/common/kusss/styles/kusss.css">
-  <link rel="stylesheet" href="/common/kusss/styles/5browser.css">
-  <link rel="stylesheet" href="/common/kusss/styles/menu.css">
-  <link rel="stylesheet" href="/common/kusss/styles/kusss_interim.css">
-  <link rel="stylesheet" href="/common/kusss/styles/tabbedPanel.css">
+  <title>KUSSS - Dashboard</title>
+  <link rel="stylesheet" href="../common/kusss/styles/kusss.css">
+  <link rel="stylesheet" href="../common/kusss/styles/5browser.css">
+  <link rel="stylesheet" href="../common/kusss/styles/menu.css">
+  <link rel="stylesheet" href="../common/kusss/styles/kusss_interim.css">
+  <link rel="stylesheet" href="../common/kusss/styles/tabbedPanel.css">
   <style>
-    .main-layout {
-      display: table;
-      width: 100%;
-      border-collapse: collapse;
-    }
-    .main-row {
-      display: table-row;
-    }
-    .menu-column {
-      display: table-cell;
-      width: 180px;
-      vertical-align: top;
-      padding: 10px;
-    }
-    .content-column {
-      display: table-cell;
-      vertical-align: top;
-      padding: 15px;
-      border-left: 1px solid #E6E9EE;
-    }
-    .context-column {
-      display: table-cell;
-      width: 180px;
-      vertical-align: top;
-      padding: 10px;
-      border-left: 1px solid #E6E9EE;
-    }
-    .header-bar {
-      background: #D3D6DB;
-      padding: 10px 15px;
-      border-bottom: 3px solid #D03B6F;
-    }
-    .header-logo {
-      display: flex;
-      align-items: center;
-      justify-content: space-between;
-    }
-    .header-logo h1 {
-      color: #333298;
-      margin: 0;
-      font-size: 1.5em;
-    }
-    .user-info {
-      display: flex;
-      align-items: center;
-      gap: 15px;
-      font-size: 11px;
-    }
-    .footer-bar {
-      background: #E6E9EE;
-      padding: 10px 15px;
-      text-align: center;
-      font-size: 10px;
-      color: #666;
-      border-top: 1px solid #D3D6DB;
-    }
-    .dashboard-grid {
-      display: grid;
-      grid-template-columns: repeat(2, 1fr);
-      gap: 15px;
-    }
-    .dashboard-card {
-      background: #F5F7F7;
-      border: 1px solid #E6E9EE;
-      padding: 15px;
-    }
-    .dashboard-card h4 {
-      margin-top: 0;
-      color: #333298;
-      border-bottom: 1px solid #D3D6DB;
-      padding-bottom: 8px;
-    }
-    .stat-row {
-      display: flex;
-      justify-content: space-between;
-      padding: 5px 0;
-      border-bottom: 1px dotted #D3D6DB;
-    }
-    .stat-row:last-child {
-      border-bottom: none;
-    }
-    .appointment-item {
-      padding: 8px;
-      margin-bottom: 5px;
-      background: #fff;
-      border-left: 3px solid #D03B6F;
-    }
-    .appointment-date {
-      font-weight: bold;
-      color: #333298;
-    }
+    .main-layout { display: table; width: 100%; border-collapse: collapse; }
+    .main-row { display: table-row; }
+    .menu-column { display: table-cell; width: 180px; vertical-align: top; padding: 10px; }
+    .content-column { display: table-cell; vertical-align: top; padding: 15px; border-left: 1px solid #E6E9EE; }
+    .context-column { display: table-cell; width: 180px; vertical-align: top; padding: 10px; border-left: 1px solid #E6E9EE; }
+    .header-bar { background: #D3D6DB; padding: 10px 15px; border-bottom: 3px solid #D03B6F; }
+    .header-logo { display: flex; align-items: center; gap: 15px; }
+    .header-logo h1 { color: #333298; margin: 0; font-size: 1.5em; }
+    .footer-bar { background: #E6E9EE; padding: 10px 15px; text-align: center; font-size: 10px; color: #666; border-top: 1px solid #D3D6DB; }
+    .dashboard-grid { display: grid; grid-template-columns: repeat(2, 1fr); gap: 15px; }
+    .dashboard-card { background: #F5F7F7; border: 1px solid #E6E9EE; padding: 15px; }
+    .dashboard-card h4 { margin-top: 0; color: #333298; border-bottom: 1px solid #D3D6DB; padding-bottom: 8px; }
+    .stat-row { display: flex; justify-content: space-between; padding: 5px 0; border-bottom: 1px dotted #D3D6DB; }
+    .stat-row:last-child { border-bottom: none; }
+    .appointment-item { padding: 8px; margin-bottom: 5px; background: #fff; border-left: 3px solid #D03B6F; }
+    .appointment-date { font-weight: bold; color: #333298; }
   </style>
 </head>
 <body>
   <div class="header-bar">
     <div class="header-logo">
-      <div style="display: flex; align-items: center; gap: 15px;">
-        <a href="/index.html"><img src="/common/kusss/pics/logos/system_kusss.png" alt="KUSSS Logo" height="40"></a>
-        <h1>KUSSS</h1>
-      </div>
-      <div class="user-info">
-        <span class="loggedin">Angemeldet als: <strong>Max Mustermann</strong> (k12345678)</span>
-        <a href="/index.html" class="buttonstyle" style="text-decoration: none; padding: 3px 10px;">Logout</a>
-      </div>
+      <a href="../index.html"><img src="../common/kusss/pics/logos/system_kusss.png" alt="KUSSS Logo" height="40"></a>
+      <h1>KUSSS</h1>
     </div>
   </div>
 
@@ -123,34 +42,34 @@
         <ul class="menu-group">
           <li class="menu-group"><span class="menu-group">Mein Studium</span>
             <ul class="menu-item">
-              <li class="menu-item menu-item-active"><a href="/pages/dashboard.html">Dashboard</a></li>
-              <li class="menu-item"><a href="/pages/courses.html">Meine LVAs</a></li>
-              <li class="menu-item"><a href="/pages/schedule.html">Stundenplan</a></li>
-              <li class="menu-item"><a href="/pages/grades.html">Notenspiegel</a></li>
+              <li class="menu-item menu-item-active"><a href="./dashboard.html">Dashboard</a></li>
+              <li class="menu-item"><a href="./courses.html">Meine LVAs</a></li>
+              <li class="menu-item"><a href="./schedule.html">Stundenplan</a></li>
+              <li class="menu-item"><a href="./grades.html">Notenspiegel</a></li>
             </ul>
           </li>
         </ul>
         <ul class="menu-group">
           <li class="menu-group"><span class="menu-group">Anmeldung</span>
             <ul class="menu-item">
-              <li class="menu-item"><a href="/pages/registration.html">LVA-Anmeldung</a></li>
-              <li class="menu-item"><a href="/pages/exams.html">Prüfungsanmeldung</a></li>
+              <li class="menu-item"><a href="./registration.html">LVA-Anmeldung</a></li>
+              <li class="menu-item"><a href="./exams.html">Prüfungsanmeldung</a></li>
             </ul>
           </li>
         </ul>
         <ul class="menu-group">
           <li class="menu-group"><span class="menu-group">Service</span>
             <ul class="menu-item">
-              <li class="menu-item"><a href="/pages/certificates.html">Bescheinigungen</a></li>
-              <li class="menu-item"><a href="/pages/profile.html">Profil</a></li>
+              <li class="menu-item"><a href="./certificates.html">Bescheinigungen</a></li>
+              <li class="menu-item"><a href="./profile.html">Profil</a></li>
             </ul>
           </li>
         </ul>
         <ul class="menu-group">
           <li class="menu-group"><span class="menu-group">Hilfe</span>
             <ul class="menu-item">
-              <li class="menu-item"><a href="/pages/help.html">FAQ</a></li>
-              <li class="menu-item"><a href="/pages/contact.html">Kontakt</a></li>
+              <li class="menu-item"><a href="https://www.jku.at/studium/studierende/kusss/" target="_blank">FAQ</a></li>
+              <li class="menu-item"><a href="./contact.html">Kontakt</a></li>
             </ul>
           </li>
         </ul>
@@ -159,11 +78,11 @@
       <div class="content-column">
         <div class="contentcell">
           <p class="path" style="text-align: right; margin-bottom: 10px;">
-            <a href="/index.html">Start</a> &gt; <span class="here">Dashboard</span>
+            <a href="../index.html">Start</a> &gt; <span class="here">Dashboard</span>
           </p>
 
           <h3>Mein Dashboard</h3>
-          <p>Willkommen zurück, Max Mustermann!</p>
+          <p>Willkommen bei KUSSS!</p>
 
           <div class="dashboard-grid">
             <div class="dashboard-card">
@@ -200,7 +119,7 @@
                 <span>Offene Prüfungen:</span>
                 <span>3</span>
               </div>
-              <a href="/pages/courses.html" class="normallinkblue" style="display: block; margin-top: 10px;">Alle LVAs anzeigen</a>
+              <a href="./courses.html" class="normallinkblue" style="display: block; margin-top: 10px;">Alle LVAs anzeigen</a>
             </div>
 
             <div class="dashboard-card" style="grid-column: span 2;">
@@ -217,7 +136,7 @@
                 <div class="appointment-date">05.02.2026, 09:00 Uhr</div>
                 <div>Prüfung: Softwareentwicklung 1 - HS 2</div>
               </div>
-              <a href="/pages/schedule.html" class="normallinkblue" style="display: block; margin-top: 10px;">Vollständiger Stundenplan</a>
+              <a href="./schedule.html" class="normallinkblue" style="display: block; margin-top: 10px;">Vollständiger Stundenplan</a>
             </div>
           </div>
         </div>
@@ -226,25 +145,20 @@
       <div class="context-column contextmenu">
         <h5>Schnellzugriff</h5>
         <ul class="contextmenulist">
-          <li><a href="/pages/registration.html">LVA anmelden</a></li>
-          <li><a href="/pages/exams.html">Prüfung anmelden</a></li>
-          <li><a href="/pages/grades.html">Noten einsehen</a></li>
+          <li><a href="./registration.html">LVA anmelden</a></li>
+          <li><a href="./exams.html">Prüfung anmelden</a></li>
+          <li><a href="./grades.html">Noten einsehen</a></li>
         </ul>
-
-        <h5>Nachrichten</h5>
-        <div class="border" style="padding: 8px; font-size: 10px;">
-          <p><strong>Keine neuen Nachrichten</strong></p>
-        </div>
       </div>
     </div>
   </div>
 
   <div class="footer-bar">
-    <p>KUSSS - Kepler University Study Support System | Lokale Entwicklungsversion</p>
+    <p>KUSSS - Kepler University Study Support System | Johannes Kepler Universität Linz</p>
   </div>
 
-  <script src="/common/kusss/scripts/change.js"></script>
-  <script src="/common/kusss/scripts/popup.js"></script>
-  <script src="/common/kusss/scripts/checkall.js"></script>
+  <script src="../common/kusss/scripts/change.js"></script>
+  <script src="../common/kusss/scripts/popup.js"></script>
+  <script src="../common/kusss/scripts/checkall.js"></script>
 </body>
 </html>

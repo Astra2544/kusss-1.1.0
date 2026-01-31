@@ -4,127 +4,39 @@
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <title>KUSSS - Kepler University Study Support System</title>
-  <link rel="stylesheet" href="/common/kusss/styles/kusss.css">
-  <link rel="stylesheet" href="/common/kusss/styles/5browser.css">
-  <link rel="stylesheet" href="/common/kusss/styles/menu.css">
-  <link rel="stylesheet" href="/common/kusss/styles/kusss_interim.css">
-  <link rel="stylesheet" href="/common/kusss/styles/tabbedPanel.css">
+  <link rel="stylesheet" href="./common/kusss/styles/kusss.css">
+  <link rel="stylesheet" href="./common/kusss/styles/5browser.css">
+  <link rel="stylesheet" href="./common/kusss/styles/menu.css">
+  <link rel="stylesheet" href="./common/kusss/styles/kusss_interim.css">
+  <link rel="stylesheet" href="./common/kusss/styles/tabbedPanel.css">
   <style>
-    .main-layout {
-      display: table;
-      width: 100%;
-      border-collapse: collapse;
-    }
-    .main-row {
-      display: table-row;
-    }
-    .menu-column {
-      display: table-cell;
-      width: 180px;
-      vertical-align: top;
-      padding: 10px;
-    }
-    .content-column {
-      display: table-cell;
-      vertical-align: top;
-      padding: 15px;
-      border-left: 1px solid #E6E9EE;
-    }
-    .context-column {
-      display: table-cell;
-      width: 180px;
-      vertical-align: top;
-      padding: 10px;
-      border-left: 1px solid #E6E9EE;
-    }
-    .header-bar {
-      background: #D3D6DB;
-      padding: 10px 15px;
-      border-bottom: 3px solid #D03B6F;
-    }
-    .header-logo {
-      display: flex;
-      align-items: center;
-      justify-content: space-between;
-    }
-    .header-logo h1 {
-      color: #333298;
-      margin: 0;
-      font-size: 1.5em;
-    }
-    .login-form {
-      display: flex;
-      align-items: center;
-      gap: 10px;
-    }
-    .welcome-section {
-      background: #F5F7F7;
-      padding: 20px;
-      margin-bottom: 20px;
-      border: 1px solid #E6E9EE;
-    }
-    .quick-links {
-      display: grid;
-      grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
-      gap: 15px;
-      margin-top: 20px;
-    }
-    .quick-link-card {
-      background: #fff;
-      border: 1px solid #D3D6DB;
-      padding: 15px;
-      text-decoration: none;
-      color: inherit;
-      transition: all 0.2s;
-    }
-    .quick-link-card:hover {
-      border-color: #D03B6F;
-      background: #F5F7F7;
-    }
-    .quick-link-card h4 {
-      color: #333298;
-      margin: 0 0 8px 0;
-    }
-    .quick-link-card p {
-      margin: 0;
-      font-size: 11px;
-      color: #666;
-    }
-    .footer-bar {
-      background: #E6E9EE;
-      padding: 10px 15px;
-      text-align: center;
-      font-size: 10px;
-      color: #666;
-      border-top: 1px solid #D3D6DB;
-    }
-    .news-item {
-      padding: 10px;
-      border-bottom: 1px dotted #D3D6DB;
-    }
-    .news-item:last-child {
-      border-bottom: none;
-    }
-    .news-date {
-      font-size: 10px;
-      color: #666;
-    }
+    .main-layout { display: table; width: 100%; border-collapse: collapse; }
+    .main-row { display: table-row; }
+    .menu-column { display: table-cell; width: 180px; vertical-align: top; padding: 10px; }
+    .content-column { display: table-cell; vertical-align: top; padding: 15px; border-left: 1px solid #E6E9EE; }
+    .context-column { display: table-cell; width: 180px; vertical-align: top; padding: 10px; border-left: 1px solid #E6E9EE; }
+    .header-bar { background: #D3D6DB; padding: 10px 15px; border-bottom: 3px solid #D03B6F; }
+    .header-logo { display: flex; align-items: center; justify-content: space-between; }
+    .header-logo h1 { color: #333298; margin: 0; font-size: 1.5em; }
+    .welcome-section { background: #F5F7F7; padding: 20px; margin-bottom: 20px; border: 1px solid #E6E9EE; }
+    .quick-links { display: grid; grid-template-columns: repeat(auto-fit, minmax(200px, 1fr)); gap: 15px; margin-top: 20px; }
+    .quick-link-card { background: #fff; border: 1px solid #D3D6DB; padding: 15px; text-decoration: none; color: inherit; transition: all 0.2s; }
+    .quick-link-card:hover { border-color: #D03B6F; background: #F5F7F7; }
+    .quick-link-card h4 { color: #333298; margin: 0 0 8px 0; }
+    .quick-link-card p { margin: 0; font-size: 11px; color: #666; }
+    .footer-bar { background: #E6E9EE; padding: 10px 15px; text-align: center; font-size: 10px; color: #666; border-top: 1px solid #D3D6DB; }
+    .news-item { padding: 10px; border-bottom: 1px dotted #D3D6DB; }
+    .news-item:last-child { border-bottom: none; }
+    .news-date { font-size: 10px; color: #666; }
   </style>
 </head>
 <body>
   <div class="header-bar">
     <div class="header-logo">
       <div style="display: flex; align-items: center; gap: 15px;">
-        <img src="/common/kusss/pics/logos/system_kusss.png" alt="KUSSS Logo" height="40">
+        <img src="./common/kusss/pics/logos/system_kusss.png" alt="KUSSS Logo" height="40">
         <h1>KUSSS</h1>
         <span style="color: #666; font-size: 11px;">Kepler University Study Support System</span>
-      </div>
-      <div class="login-form">
-        <label>Matrikelnr.:</label>
-        <input type="text" class="inputfields" style="width: 80px;" id="matrikel">
-        <label>Kennwort:</label>
-        <input type="password" class="inputfields" style="width: 80px;" id="password">
-        <button class="buttonstyle" onclick="window.location.href='/pages/dashboard.html'">Login</button>
       </div>
     </div>
   </div>
@@ -135,27 +47,27 @@
         <ul class="menu-group">
           <li class="menu-group"><span class="menu-group">Information</span>
             <ul class="menu-item">
-              <li class="menu-item"><a href="/pages/news.html">Aktuelles</a></li>
-              <li class="menu-item"><a href="/pages/help.html">Hilfe</a></li>
-              <li class="menu-item"><a href="/pages/contact.html">Kontakt</a></li>
+              <li class="menu-item"><a href="./pages/news.html">Aktuelles</a></li>
+              <li class="menu-item"><a href="https://www.jku.at/studium/studierende/kusss/" target="_blank">Hilfe</a></li>
+              <li class="menu-item"><a href="./pages/contact.html">Kontakt</a></li>
             </ul>
           </li>
         </ul>
         <ul class="menu-group">
           <li class="menu-group"><span class="menu-group">Studium</span>
             <ul class="menu-item">
-              <li class="menu-item"><a href="/pages/courses.html">LVA-Suche</a></li>
-              <li class="menu-item"><a href="/pages/schedule.html">Stundenplan</a></li>
-              <li class="menu-item"><a href="/pages/exams.html">Prüfungen</a></li>
+              <li class="menu-item"><a href="./pages/courses.html">LVA-Suche</a></li>
+              <li class="menu-item"><a href="./pages/schedule.html">Stundenplan</a></li>
+              <li class="menu-item"><a href="./pages/exams.html">Prüfungen</a></li>
             </ul>
           </li>
         </ul>
         <ul class="menu-group">
           <li class="menu-group"><span class="menu-group">Service</span>
             <ul class="menu-item">
-              <li class="menu-item"><a href="/pages/registration.html">Anmeldung</a></li>
-              <li class="menu-item"><a href="/pages/grades.html">Noten</a></li>
-              <li class="menu-item"><a href="/pages/certificates.html">Bescheinigungen</a></li>
+              <li class="menu-item"><a href="./pages/registration.html">Anmeldung</a></li>
+              <li class="menu-item"><a href="./pages/grades.html">Noten</a></li>
+              <li class="menu-item"><a href="./pages/certificates.html">Bescheinigungen</a></li>
             </ul>
           </li>
         </ul>
@@ -167,24 +79,23 @@
 
           <div class="welcome-section">
             <p>Das <strong>Kepler University Study Support System (KUSSS)</strong> ist das zentrale Informations- und Verwaltungssystem für Studierende der Johannes Kepler Universität Linz.</p>
-            <p>Bitte melden Sie sich mit Ihrer Matrikelnummer und Ihrem Kennwort an, um alle Funktionen nutzen zu können.</p>
           </div>
 
           <h4>Schnellzugriff</h4>
           <div class="quick-links">
-            <a href="/pages/courses.html" class="quick-link-card">
+            <a href="./pages/courses.html" class="quick-link-card">
               <h4>LVA-Suche</h4>
               <p>Durchsuchen Sie das Lehrveranstaltungsangebot</p>
             </a>
-            <a href="/pages/schedule.html" class="quick-link-card">
+            <a href="./pages/schedule.html" class="quick-link-card">
               <h4>Stundenplan</h4>
               <p>Ihre persönlichen Termine und Vorlesungen</p>
             </a>
-            <a href="/pages/exams.html" class="quick-link-card">
+            <a href="./pages/exams.html" class="quick-link-card">
               <h4>Prüfungen</h4>
               <p>Prüfungstermine und Anmeldungen</p>
             </a>
-            <a href="/pages/grades.html" class="quick-link-card">
+            <a href="./pages/grades.html" class="quick-link-card">
               <h4>Notenspiegel</h4>
               <p>Ihre bisherigen Prüfungsergebnisse</p>
             </a>
@@ -214,33 +125,33 @@
       <div class="context-column contextmenu">
         <h5>Quicklinks</h5>
         <ul class="contextmenulist">
-          <li><a href="/pages/dashboard.html">Mein KUSSS</a></li>
-          <li><a href="/pages/courses.html">LVA-Angebot</a></li>
-          <li><a href="/pages/schedule.html">Stundenplan</a></li>
-          <li><a href="/pages/grades.html">Notenspiegel</a></li>
+          <li><a href="./pages/dashboard.html">Mein KUSSS</a></li>
+          <li><a href="./pages/courses.html">LVA-Angebot</a></li>
+          <li><a href="./pages/schedule.html">Stundenplan</a></li>
+          <li><a href="./pages/grades.html">Notenspiegel</a></li>
         </ul>
 
         <h5>Termine</h5>
         <ul class="contextmenulist">
-          <li><a href="/pages/exams.html">Prüfungen</a></li>
-          <li><a href="/pages/registration.html">Anmeldung</a></li>
+          <li><a href="./pages/exams.html">Prüfungen</a></li>
+          <li><a href="./pages/registration.html">Anmeldung</a></li>
         </ul>
 
         <h5>Hilfe</h5>
         <ul class="contextmenulist">
-          <li><a href="/pages/help.html">FAQ</a></li>
-          <li><a href="/pages/contact.html">Support</a></li>
+          <li><a href="https://www.jku.at/studium/studierende/kusss/" target="_blank">FAQ</a></li>
+          <li><a href="./pages/contact.html">Support</a></li>
         </ul>
       </div>
     </div>
   </div>
 
   <div class="footer-bar">
-    <p>KUSSS - Kepler University Study Support System | Johannes Kepler Universität Linz | Lokale Entwicklungsversion</p>
+    <p>KUSSS - Kepler University Study Support System | Johannes Kepler Universität Linz</p>
   </div>
 
-  <script src="/common/kusss/scripts/change.js"></script>
-  <script src="/common/kusss/scripts/popup.js"></script>
-  <script src="/common/kusss/scripts/checkall.js"></script>
+  <script src="./common/kusss/scripts/change.js"></script>
+  <script src="./common/kusss/scripts/popup.js"></script>
+  <script src="./common/kusss/scripts/checkall.js"></script>
 </body>
 </html>

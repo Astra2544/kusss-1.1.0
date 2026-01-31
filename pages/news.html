@@ -4,11 +4,11 @@
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <title>KUSSS - Aktuelles</title>
-  <link rel="stylesheet" href="/common/kusss/styles/kusss.css">
-  <link rel="stylesheet" href="/common/kusss/styles/5browser.css">
-  <link rel="stylesheet" href="/common/kusss/styles/menu.css">
-  <link rel="stylesheet" href="/common/kusss/styles/kusss_interim.css">
-  <link rel="stylesheet" href="/common/kusss/styles/tabbedPanel.css">
+  <link rel="stylesheet" href="../common/kusss/styles/kusss.css">
+  <link rel="stylesheet" href="../common/kusss/styles/5browser.css">
+  <link rel="stylesheet" href="../common/kusss/styles/menu.css">
+  <link rel="stylesheet" href="../common/kusss/styles/kusss_interim.css">
+  <link rel="stylesheet" href="../common/kusss/styles/tabbedPanel.css">
   <style>
     .main-layout { display: table; width: 100%; border-collapse: collapse; }
     .main-row { display: table-row; }
@@ -16,7 +16,7 @@
     .content-column { display: table-cell; vertical-align: top; padding: 15px; border-left: 1px solid #E6E9EE; }
     .context-column { display: table-cell; width: 180px; vertical-align: top; padding: 10px; border-left: 1px solid #E6E9EE; }
     .header-bar { background: #D3D6DB; padding: 10px 15px; border-bottom: 3px solid #D03B6F; }
-    .header-logo { display: flex; align-items: center; justify-content: space-between; }
+    .header-logo { display: flex; align-items: center; gap: 15px; }
     .header-logo h1 { color: #333298; margin: 0; font-size: 1.5em; }
     .footer-bar { background: #E6E9EE; padding: 10px 15px; text-align: center; font-size: 10px; color: #666; border-top: 1px solid #D3D6DB; }
     .news-article { background: #F5F7F7; padding: 15px; margin-bottom: 15px; border: 1px solid #E6E9EE; border-left: 4px solid #D03B6F; }
@@ -28,13 +28,8 @@
 <body>
   <div class="header-bar">
     <div class="header-logo">
-      <div style="display: flex; align-items: center; gap: 15px;">
-        <a href="/index.html"><img src="/common/kusss/pics/logos/system_kusss.png" alt="KUSSS Logo" height="40"></a>
-        <h1>KUSSS</h1>
-      </div>
-      <div style="font-size: 11px;">
-        <a href="/index.html" class="buttonstyle" style="text-decoration: none; padding: 3px 10px;">Login</a>
-      </div>
+      <a href="../index.html"><img src="../common/kusss/pics/logos/system_kusss.png" alt="KUSSS Logo" height="40"></a>
+      <h1>KUSSS</h1>
     </div>
   </div>
 
@@ -44,18 +39,18 @@
         <ul class="menu-group">
           <li class="menu-group"><span class="menu-group">Information</span>
             <ul class="menu-item">
-              <li class="menu-item menu-item-active"><a href="/pages/news.html">Aktuelles</a></li>
-              <li class="menu-item"><a href="/pages/help.html">Hilfe</a></li>
-              <li class="menu-item"><a href="/pages/contact.html">Kontakt</a></li>
+              <li class="menu-item menu-item-active"><a href="./news.html">Aktuelles</a></li>
+              <li class="menu-item"><a href="https://www.jku.at/studium/studierende/kusss/" target="_blank">Hilfe</a></li>
+              <li class="menu-item"><a href="./contact.html">Kontakt</a></li>
             </ul>
           </li>
         </ul>
         <ul class="menu-group">
           <li class="menu-group"><span class="menu-group">Studium</span>
             <ul class="menu-item">
-              <li class="menu-item"><a href="/pages/courses.html">LVA-Suche</a></li>
-              <li class="menu-item"><a href="/pages/schedule.html">Stundenplan</a></li>
-              <li class="menu-item"><a href="/pages/exams.html">Prüfungen</a></li>
+              <li class="menu-item"><a href="./courses.html">LVA-Suche</a></li>
+              <li class="menu-item"><a href="./schedule.html">Stundenplan</a></li>
+              <li class="menu-item"><a href="./exams.html">Prüfungen</a></li>
             </ul>
           </li>
         </ul>
@@ -64,7 +59,7 @@
       <div class="content-column">
         <div class="contentcell">
           <p class="path" style="text-align: right; margin-bottom: 10px;">
-            <a href="/index.html">Start</a> &gt; <span class="here">Aktuelles</span>
+            <a href="../index.html">Start</a> &gt; <span class="here">Aktuelles</span>
           </p>
 
           <h3>Aktuelles</h3>
@@ -134,11 +129,11 @@
   </div>
 
   <div class="footer-bar">
-    <p>KUSSS - Kepler University Study Support System | Lokale Entwicklungsversion</p>
+    <p>KUSSS - Kepler University Study Support System | Johannes Kepler Universität Linz</p>
   </div>
 
-  <script src="/common/kusss/scripts/change.js"></script>
-  <script src="/common/kusss/scripts/popup.js"></script>
-  <script src="/common/kusss/scripts/checkall.js"></script>
+  <script src="../common/kusss/scripts/change.js"></script>
+  <script src="../common/kusss/scripts/popup.js"></script>
+  <script src="../common/kusss/scripts/checkall.js"></script>
 </body>
 </html>
